@@ -322,16 +322,9 @@
     <!-- ========================================================= -->
     <section class="form-section" id="formSection" style="display: none;">
         <div class="form-container">
+            <button class="close-btn" onclick="tutupFormulir()">X</button>
             
-            <!-- TOMBOL KEMBALI KE DASHBOARD & TUTUP -->
-            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-                <button class="btn-back-dashboard" onclick="tutupFormulir()">
-                    <i class="fas fa-arrow-left"></i> Kembali ke Dashboard
-                </button>
-                <button class="close-btn" onclick="tutupFormulir()" style="position: relative; top: 0; right: 0;">X</button>
-            </div>
-
-            <div class="form-header" style="margin-top: 10px;">
+            <div class="form-header">
                 <h1>Formulir Transaksi</h1>
                 <h2>Laku Pandai BPD DIY – SMK N 1 Bantul</h2>
                 <p id="petugasInfo" class="petugas-info"></p>
@@ -344,13 +337,13 @@
                 <input type="text" id="inputNama" placeholder="Masukkan nama lengkap">
             </div>
             
-            <!-- Nomor Rekening / E-Wallet -->
+            <!-- PERUBAHAN 1: Nomor Rekening menjadi Nomor HP / E-Wallet -->
             <div class="form-group">
                 <label>No. HP / E-Wallet (Dana/OVO)</label><div class="separator">:</div>
                 <input type="text" id="inputRekening" placeholder="Contoh: 089529404114 (Dana)">
             </div>
             
-            <!-- NIK / NIS -->
+            <!-- PERUBAHAN 2: NIK / NIS -->
             <div class="form-group">
                 <label>NIK / NIS</label><div class="separator">:</div>
                 <input type="text" id="inputNIK" placeholder="Masukkan NIK atau NIS siswa">
@@ -388,7 +381,7 @@
                 </div>
             </div>
             
-            <!-- Bank / E-Wallet Tujuan -->
+            <!-- PERUBAHAN 3: Bank Tujuan / E-Wallet Tujuan -->
             <div class="form-group">
                 <label>Bank / E-Wallet Tujuan</label><div class="separator">:</div>
                 <input type="text" id="inputBank" placeholder="Contoh: BPD DIY, BCA, Dana, OVO, dll">
