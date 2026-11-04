@@ -1752,7 +1752,3 @@ img {
 /* ============================================
    FILTER LOGO BPD (Menjadi Putih)
    ============================================ */
-.logo-icon img, 
-.hero-card-icon img {
-    filter: brightness(0) invert(1); /* Membuat logo berwarna putih */
-}
