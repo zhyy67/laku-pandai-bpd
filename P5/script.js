@@ -233,7 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // ==========================================
-// FUNGSI FORMULIR TRANSAKSI (BARU)
+// FUNGSI FORMULIR TRANSAKSI (BUKA & TUTUP)
 // ==========================================
 
 /**
@@ -241,36 +241,50 @@ document.addEventListener('DOMContentLoaded', () => {
  * dan otomatis mencentang jenis transaksi.
  */
 function bukaFormulir(jenisLayanan, namaPetugas) {
-    // 1. Sembunyikan semua section utama
+    // 1. Simpan nama petugas ke variabel global agar bisa dibaca saat kirim WA
+    window.petugasTerpilih = namaPetugas;
+
+    // 2. Sembunyikan semua section utama
     const sectionsToHide = ['.navbar', '.hero', '.about', '.features', '.services', '.procedure', '.location', '.faq', '.cta', '.footer'];
     sectionsToHide.forEach(selector => {
         const el = document.querySelector(selector);
         if (el) el.style.display = 'none';
     });
 
-    // 2. Tampilkan bagian formulir
+    // 3. Tampilkan bagian formulir
     const formSection = document.getElementById('formSection');
     if (formSection) {
-        formSection.style.display = 'block';
+        formSection.style.display = 'flex'; // Gunakan flex agar posisi form di tengah
     }
 
-    // 3. Tampilkan info petugas yang dipilih
+    // 4. Tampilkan info petugas yang dipilih
     const petugasInfo = document.getElementById('petugasInfo');
     if (petugasInfo) {
         petugasInfo.innerText = "Petugas: " + namaPetugas;
     }
 
-    // 4. Set tanggal otomatis ke hari ini
+    // 5. Set tanggal otomatis ke hari ini
     const tanggalInput = document.getElementById('tanggal');
     if (tanggalInput) {
         tanggalInput.valueAsDate = new Date();
     }
 
-    // 5. Reset semua checkbox terlebih dahulu
-    const checkboxes = document.querySelectorAll('#jenis-transaksi input[type="checkbox"]');
+    // 6. Reset semua checkbox dan isian form terlebih dahulu
+    document.getElementById('inputNama').value = '';
+    document.getElementById('inputRekening').value = '';
+    document.getElementById('inputNIK').value = '';
+    document.getElementById('inputHP').value = '';
+    document.getElementById('inputNominal').value = '';
+    document.getElementById('inputBank').value = '';
+    document.getElementById('inputRekTujuan').value = '';
+    document.getElementById('inputPenerima').value = '';
+    document.getElementById('inputKeterangan').value = '';
+    document.getElementById('inputReferensi').value = '';
+    
+    const checkboxes = document.querySelectorAll('#jenis-transaksi input[type="checkbox"], .status-group input[type="checkbox"]');
     checkboxes.forEach(cb => cb.checked = false);
 
-    // 6. Centang otomatis checkbox sesuai layanan yang diklik
+    // 7. Centang otomatis checkbox sesuai layanan yang diklik
     if (jenisLayanan === 'Aktivasi Rekening Baru') document.getElementById('cb-aktivasi').checked = true;
     if (jenisLayanan === 'Cek Saldo') document.getElementById('cb-ceksaldo').checked = true;
     if (jenisLayanan === 'Setoran Tunai') document.getElementById('cb-setoran').checked = true;
@@ -279,7 +293,7 @@ function bukaFormulir(jenisLayanan, namaPetugas) {
     if (jenisLayanan === 'Pembayaran') document.getElementById('cb-pembayaran').checked = true;
     if (jenisLayanan === 'Pembelian') document.getElementById('cb-pembelian').checked = true;
 
-    // 7. Gulir layar ke atas dengan halus
+    // 8. Gulir layar ke atas dengan halus
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -298,18 +312,104 @@ function tutupFormulir() {
     sectionsToShow.forEach(selector => {
         const el = document.querySelector(selector);
         if (el) {
-            // Navbar butuh display: flex, section lain block
             if (selector === '.navbar') {
-                el.style.display = 'block'; 
+                el.style.display = 'block'; // Navbar kembali ke block
             } else {
                 el.style.display = 'block';
             }
         }
     });
 
-    // 3. Gulir kembali ke bagian layanan (agar user tidak bingung)
+    // 3. Gulir kembali ke bagian layanan
     const servicesSection = document.getElementById('services');
     if (servicesSection) {
         servicesSection.scrollIntoView({ behavior: 'smooth' });
     }
+}
+
+
+// ==========================================
+// FUNGSI KIRIM KE WHATSAPP
+// ==========================================
+
+/**
+ * Fungsi untuk mengambil semua data dari formulir,
+ * memformatnya menjadi pesan yang rapi,
+ * dan membukanya di aplikasi WhatsApp.
+ */
+function kirimKeWhatsApp() {
+    // 1. Ambil nilai dari semua input berdasarkan ID
+    const nama = document.getElementById('inputNama').value.trim();
+    const rekening = document.getElementById('inputRekening').value.trim();
+    const nik = document.getElementById('inputNIK').value.trim();
+    const hp = document.getElementById('inputHP').value.trim();
+    const tanggal = document.getElementById('tanggal').value;
+    
+    // Ambil jenis transaksi yang dicentang
+    let jenisTransaksi = [];
+    document.querySelectorAll('#jenis-transaksi input[type="checkbox"]:checked').forEach(cb => {
+        jenisTransaksi.push(cb.value);
+    });
+    let jenisStr = jenisTransaksi.length > 0 ? jenisTransaksi.join(', ') : 'Tidak ada yang dipilih';
+
+    const nominal = document.getElementById('inputNominal').value.trim();
+    const bank = document.getElementById('inputBank').value.trim();
+    const rekTujuan = document.getElementById('inputRekTujuan').value.trim();
+    const penerima = document.getElementById('inputPenerima').value.trim();
+    const keterangan = document.getElementById('inputKeterangan').value.trim();
+
+    // Ambil status transaksi
+    let statusTransaksi = "Belum dikonfirmasi";
+    document.querySelectorAll('.status-group input[type="checkbox"]:checked').forEach(cb => {
+        statusTransaksi = cb.value;
+    });
+    
+    const referensi = document.getElementById('inputReferensi').value.trim();
+
+    // 2. Validasi sederhana (Pastikan Nama dan Nominal diisi)
+    if (nama === "" || nominal === "") {
+        alert("Mohon isi Nama Nasabah dan Nominal Transaksi terlebih dahulu!");
+        return;
+    }
+
+    // 3. Tentukan Nomor WhatsApp Tujuan
+    // Ganti nomor ini dengan nomor asli Bu Tantri dan Bu Isti (Gunakan awalan 62)
+    const nomorBuTantri = "628212024465"; 
+    const nomorBuIsti = "6281802766019";
+    
+    // Cek petugas yang dipilih saat tombol buka formulir diklik
+    let nomorWA = nomorBuTantri; // Default
+    if (window.petugasTerpilih === "Bu Isti") {
+        nomorWA = nomorBuIsti;
+    }
+
+    // 4. Susun pesan WhatsApp (Gunakan %0A untuk Enter/Baris Baru)
+    const pesan = `Halo *${window.petugasTerpilih}*, saya ingin melakukan transaksi Laku Pandai BPD.%0A%0A` +
+                  `*--- DATA NASABAH ---*%0A` +
+                  `Nama: ${nama}%0A` +
+                  `No. Rekening: ${rekening || '-'}%0A` +
+                  `NIK: ${nik || '-'}%0A` +
+                  `No. HP: ${hp || '-'}%0A` +
+                  `Tanggal: ${tanggal}%0A%0A` +
+                  `*--- DETAIL TRANSAKSI ---*%0A` +
+                  `Jenis Transaksi: *${jenisStr}*%0A` +
+                  `Nominal: *Rp ${nominal}*%0A` +
+                  `Bank Tujuan: ${bank || '-'}%0A` +
+                  `No. Rek Tujuan: ${rekTujuan || '-'}%0A` +
+                  `Nama Penerima: ${penerima || '-'}%0A` +
+                  `Keterangan: ${keterangan || '-'}%0A%0A` +
+                  `*--- KONFIRMASI ---*%0A` +
+                  `Status: ${statusTransaksi}%0A` +
+                  `No. Referensi: ${referensi || '-'}%0A%0A` +
+                  `Mohon segera diproses. Terima kasih.`;
+
+    // 5. Buka WhatsApp di tab baru
+    const urlWA = `https://wa.me/${nomorWA}?text=${pesan}`;
+    window.open(urlWA, '_blank');
+    
+    // 6. Tutup formulir setelah dikirim (Opsional)
+    // tutupFormulir(); 
+    
+    // Beri notifikasi ke user
+    alert("Formulir berhasil disiapkan! Silakan klik 'Kirim' di aplikasi WhatsApp Anda.");
 }

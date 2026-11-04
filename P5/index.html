@@ -20,7 +20,6 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#" class="nav-logo">
-                <!-- LOGO BPD DI NAVBAR -->
                 <div class="logo-icon">
                     <img src="logo-bpd.png" alt="Logo BPD DIY">
                 </div>
@@ -215,9 +214,7 @@
         </div>
     </section>
 
-    <!-- ========================================================= -->
-    <!-- SERVICES SECTION (SUDAH DIEDIT) -->
-    <!-- ========================================================= -->
+    <!-- Services Section -->
     <section class="services" id="services">
         <div class="container">
             <div class="section-header">
@@ -321,101 +318,102 @@
     </section>
 
     <!-- ========================================================= -->
-    <!-- FORMULIR TRANSAKSI (Tersembunyi, Muncul saat tombol diklik) -->
+    <!-- FORMULIR TRANSAKSI -->
     <!-- ========================================================= -->
-    <section class="form-section" id="formSection" style="display: none; padding: 40px 20px; background-color: #e2e8f0;">
-        <div class="form-container" style="background-color: #ffffff; max-width: 800px; margin: 0 auto; padding: 40px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); position: relative;">
+    <section class="form-section" id="formSection" style="display: none;">
+        <div class="form-container">
+            <button class="close-btn" onclick="tutupFormulir()">X</button>
             
-            <!-- Tombol Tutup -->
-            <button class="close-btn" onclick="tutupFormulir()" style="position: absolute; top: 20px; right: 20px; background: #fee2e2; color: #ef4444; border: none; width: 30px; height: 30px; border-radius: 50%; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: 0.3s;">X</button>
-            
-            <div class="form-header" style="text-align: center; border-bottom: 2px solid #1e3a8a; padding-bottom: 20px; margin-bottom: 30px;">
-                <h1 style="margin: 0 0 5px 0; color: #1e3a8a; font-size: 24px; text-transform: uppercase;">Formulir Transaksi</h1>
-                <h2 style="margin: 0; color: #4b5563; font-size: 16px; font-weight: normal; font-style: italic;">Laku Pandai BPD DIY – SMK N 1 Bantul</h2>
-                <p id="petugasInfo" style="margin-top:10px; font-weight:bold; color:#1e3a8a;"></p>
+            <div class="form-header">
+                <h1>Formulir Transaksi</h1>
+                <h2>Laku Pandai BPD DIY – SMK N 1 Bantul</h2>
+                <p id="petugasInfo" class="petugas-info"></p>
             </div>
 
             <!-- A. DATA NASABAH -->
-            <div class="section-title" style="background-color: #f0fdf4; color: #166534; padding: 8px 12px; font-weight: bold; border-left: 4px solid #22c55e; margin-top: 30px; margin-bottom: 20px; font-size: 16px;">A. DATA NASABAH</div>
-            <div class="form-group" style="display: flex; margin-bottom: 15px; align-items: flex-end;">
-                <label style="width: 200px; font-weight: 500; color: #374151; flex-shrink: 0; font-size: 14px;">Nama Nasabah</label><div class="separator" style="width: 15px; text-align: center; font-weight: bold;">:</div>
-                <input type="text" placeholder="Masukkan nama lengkap" style="flex-grow: 1; padding: 8px; border: none; border-bottom: 1px solid #9ca3af; background-color: transparent; font-family: inherit; font-size: 15px; outline: none;">
+            <div class="section-title-form">A. DATA NASABAH</div>
+            <div class="form-group">
+                <label>Nama Nasabah</label><div class="separator">:</div>
+                <input type="text" id="inputNama" placeholder="Masukkan nama lengkap">
             </div>
-            <div class="form-group" style="display: flex; margin-bottom: 15px; align-items: flex-end;">
-                <label style="width: 200px; font-weight: 500; color: #374151; flex-shrink: 0; font-size: 14px;">Nomor Rekening</label><div class="separator" style="width: 15px; text-align: center; font-weight: bold;">:</div>
-                <input type="text" placeholder="Masukkan nomor rekening" style="flex-grow: 1; padding: 8px; border: none; border-bottom: 1px solid #9ca3af; background-color: transparent; font-family: inherit; font-size: 15px; outline: none;">
+            <div class="form-group">
+                <label>Nomor Rekening</label><div class="separator">:</div>
+                <input type="text" id="inputRekening" placeholder="Masukkan nomor rekening">
             </div>
-            <div class="form-group" style="display: flex; margin-bottom: 15px; align-items: flex-end;">
-                <label style="width: 200px; font-weight: 500; color: #374151; flex-shrink: 0; font-size: 14px;">NIK</label><div class="separator" style="width: 15px; text-align: center; font-weight: bold;">:</div>
-                <input type="text" placeholder="Masukkan NIK (16 digit)" style="flex-grow: 1; padding: 8px; border: none; border-bottom: 1px solid #9ca3af; background-color: transparent; font-family: inherit; font-size: 15px; outline: none;">
+            <div class="form-group">
+                <label>NIK</label><div class="separator">:</div>
+                <input type="text" id="inputNIK" placeholder="Masukkan NIK (16 digit)">
             </div>
-            <div class="form-group" style="display: flex; margin-bottom: 15px; align-items: flex-end;">
-                <label style="width: 200px; font-weight: 500; color: #374151; flex-shrink: 0; font-size: 14px;">Nomor HP</label><div class="separator" style="width: 15px; text-align: center; font-weight: bold;">:</div>
-                <input type="text" placeholder="Masukkan nomor HP aktif" style="flex-grow: 1; padding: 8px; border: none; border-bottom: 1px solid #9ca3af; background-color: transparent; font-family: inherit; font-size: 15px; outline: none;">
+            <div class="form-group">
+                <label>Nomor HP</label><div class="separator">:</div>
+                <input type="text" id="inputHP" placeholder="Masukkan nomor HP aktif">
             </div>
-            <div class="form-group" style="display: flex; margin-bottom: 15px; align-items: flex-end;">
-                <label style="width: 200px; font-weight: 500; color: #374151; flex-shrink: 0; font-size: 14px;">Tanggal Transaksi</label><div class="separator" style="width: 15px; text-align: center; font-weight: bold;">:</div>
-                <input type="date" id="tanggal" style="flex-grow: 1; padding: 8px; border: none; border-bottom: 1px solid #9ca3af; background-color: transparent; font-family: inherit; font-size: 15px; outline: none;">
+            <div class="form-group">
+                <label>Tanggal Transaksi</label><div class="separator">:</div>
+                <input type="date" id="tanggal">
             </div>
 
             <!-- B. JENIS TRANSAKSI -->
-            <div class="section-title" style="background-color: #f0fdf4; color: #166534; padding: 8px 12px; font-weight: bold; border-left: 4px solid #22c55e; margin-top: 30px; margin-bottom: 20px; font-size: 16px;">B. JENIS TRANSAKSI</div>
-            <p style="margin: 0 0 10px 20px; font-size: 14px; color: #6b7280;">Beri tanda centang (✓) pada jenis transaksi:</p>
-            <div class="checkbox-grid" id="jenis-transaksi" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-top: 10px; margin-bottom: 20px; padding-left: 20px;">
-                <label class="checkbox-item" style="display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 14px;"><input type="checkbox" name="jenis" value="Aktivasi Rekening Baru" id="cb-aktivasi" style="width: 18px; height: 18px; cursor: pointer; accent-color: #166534;"> Aktivasi Rekening Baru</label>
-                <label class="checkbox-item" style="display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 14px;"><input type="checkbox" name="jenis" value="Cek Saldo" id="cb-ceksaldo" style="width: 18px; height: 18px; cursor: pointer; accent-color: #166534;"> Cek Saldo / Info</label>
-                <label class="checkbox-item" style="display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 14px;"><input type="checkbox" name="jenis" value="Setoran Tunai" id="cb-setoran" style="width: 18px; height: 18px; cursor: pointer; accent-color: #166534;"> Setoran Tunai</label>
-                <label class="checkbox-item" style="display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 14px;"><input type="checkbox" name="jenis" value="Tarik Tunai" id="cb-tarik" style="width: 18px; height: 18px; cursor: pointer; accent-color: #166534;"> Tarik Tunai</label>
-                <label class="checkbox-item" style="display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 14px;"><input type="checkbox" name="jenis" value="Transfer" id="cb-transfer" style="width: 18px; height: 18px; cursor: pointer; accent-color: #166534;"> Transfer Dana</label>
-                <label class="checkbox-item" style="display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 14px;"><input type="checkbox" name="jenis" value="Pembayaran" id="cb-pembayaran" style="width: 18px; height: 18px; cursor: pointer; accent-color: #166534;"> Pembayaran</label>
-                <label class="checkbox-item" style="display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 14px;"><input type="checkbox" name="jenis" value="Pembelian" id="cb-pembelian" style="width: 18px; height: 18px; cursor: pointer; accent-color: #166534;"> Pembelian</label>
+            <div class="section-title-form">B. JENIS TRANSAKSI</div>
+            <p style="margin: 0 0 10px 20px; font-size: 14px; color: var(--gray-500);">Beri tanda centang (✓) pada jenis transaksi:</p>
+            <div class="checkbox-grid" id="jenis-transaksi">
+                <label class="checkbox-item"><input type="checkbox" name="jenis" value="Aktivasi Rekening Baru" id="cb-aktivasi"> Aktivasi Rekening Baru</label>
+                <label class="checkbox-item"><input type="checkbox" name="jenis" value="Cek Saldo" id="cb-ceksaldo"> Cek Saldo / Info</label>
+                <label class="checkbox-item"><input type="checkbox" name="jenis" value="Setoran Tunai" id="cb-setoran"> Setoran Tunai</label>
+                <label class="checkbox-item"><input type="checkbox" name="jenis" value="Tarik Tunai" id="cb-tarik"> Tarik Tunai</label>
+                <label class="checkbox-item"><input type="checkbox" name="jenis" value="Transfer" id="cb-transfer"> Transfer Dana</label>
+                <label class="checkbox-item"><input type="checkbox" name="jenis" value="Pembayaran" id="cb-pembayaran"> Pembayaran</label>
+                <label class="checkbox-item"><input type="checkbox" name="jenis" value="Pembelian" id="cb-pembelian"> Pembelian</label>
             </div>
 
             <!-- C. DETAIL TRANSAKSI -->
-            <div class="section-title" style="background-color: #f0fdf4; color: #166534; padding: 8px 12px; font-weight: bold; border-left: 4px solid #22c55e; margin-top: 30px; margin-bottom: 20px; font-size: 16px;">C. DETAIL TRANSAKSI</div>
-            <div class="form-group" style="display: flex; margin-bottom: 15px; align-items: flex-end;">
-                <label style="width: 200px; font-weight: 500; color: #374151; flex-shrink: 0; font-size: 14px;">Nominal Transaksi</label><div class="separator" style="width: 15px; text-align: center; font-weight: bold;">:</div>
-                <div style="display:flex; align-items:center; flex-grow:1; border-bottom: 1px solid #9ca3af;">
-                    <span style="padding-right: 5px; font-weight: bold; color:#4b5563;">Rp</span>
-                    <input type="text" style="border-bottom:none; width:100%; flex-grow: 1; padding: 8px; background-color: transparent; font-family: inherit; font-size: 15px; outline: none;" placeholder="0">
+            <div class="section-title-form">C. DETAIL TRANSAKSI</div>
+            <div class="form-group">
+                <label>Nominal Transaksi</label><div class="separator">:</div>
+                <div style="display:flex; align-items:center; flex-grow:1; border-bottom: 1px solid var(--gray-300);">
+                    <span style="padding-right: 5px; font-weight: bold; color:var(--gray-600);">Rp</span>
+                    <input type="text" id="inputNominal" style="border-bottom:none;" placeholder="0">
                 </div>
             </div>
-            <div class="form-group" style="display: flex; margin-bottom: 15px; align-items: flex-end;">
-                <label style="width: 200px; font-weight: 500; color: #374151; flex-shrink: 0; font-size: 14px;">Nama Bank Tujuan</label><div class="separator" style="width: 15px; text-align: center; font-weight: bold;">:</div>
-                <input type="text" placeholder="Contoh: BPD DIY, BCA, Mandiri, dll" style="flex-grow: 1; padding: 8px; border: none; border-bottom: 1px solid #9ca3af; background-color: transparent; font-family: inherit; font-size: 15px; outline: none;">
+            <div class="form-group">
+                <label>Nama Bank Tujuan</label><div class="separator">:</div>
+                <input type="text" id="inputBank" placeholder="Contoh: BPD DIY, BCA, Mandiri, dll">
             </div>
-            <div class="form-group" style="display: flex; margin-bottom: 15px; align-items: flex-end;">
-                <label style="width: 200px; font-weight: 500; color: #374151; flex-shrink: 0; font-size: 14px;">Nomor Rekening Tujuan</label><div class="separator" style="width: 15px; text-align: center; font-weight: bold;">:</div>
-                <input type="text" placeholder="Masukkan nomor rekening tujuan" style="flex-grow: 1; padding: 8px; border: none; border-bottom: 1px solid #9ca3af; background-color: transparent; font-family: inherit; font-size: 15px; outline: none;">
+            <div class="form-group">
+                <label>Nomor Rekening Tujuan</label><div class="separator">:</div>
+                <input type="text" id="inputRekTujuan" placeholder="Masukkan nomor rekening tujuan">
             </div>
-            <div class="form-group" style="display: flex; margin-bottom: 15px; align-items: flex-end;">
-                <label style="width: 200px; font-weight: 500; color: #374151; flex-shrink: 0; font-size: 14px;">Nama Penerima</label><div class="separator" style="width: 15px; text-align: center; font-weight: bold;">:</div>
-                <input type="text" placeholder="Masukkan nama penerima" style="flex-grow: 1; padding: 8px; border: none; border-bottom: 1px solid #9ca3af; background-color: transparent; font-family: inherit; font-size: 15px; outline: none;">
+            <div class="form-group">
+                <label>Nama Penerima</label><div class="separator">:</div>
+                <input type="text" id="inputPenerima" placeholder="Masukkan nama penerima">
             </div>
-            <div class="textarea-group" style="display: flex; flex-direction: column; margin-bottom: 15px;">
-                <label style="font-weight: 500; color: #374151; margin-bottom: 5px; font-size: 14px;">Keterangan :</label>
-                <textarea placeholder="Tambahkan catatan tambahan jika diperlukan..." style="width: 100%; padding: 10px; border: 1px solid #d1d5db; border-radius: 4px; font-family: inherit; font-size: 15px; resize: vertical; min-height: 80px; box-sizing: border-box;"></textarea>
+            <div class="textarea-group">
+                <label>Keterangan :</label>
+                <textarea id="inputKeterangan" placeholder="Tambahkan catatan tambahan jika diperlukan..."></textarea>
             </div>
 
             <!-- D. KONFIRMASI TRANSAKSI -->
-            <div class="section-title" style="background-color: #f0fdf4; color: #166534; padding: 8px 12px; font-weight: bold; border-left: 4px solid #22c55e; margin-top: 30px; margin-bottom: 20px; font-size: 16px;">D. KONFIRMASI TRANSAKSI</div>
-            <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
-                <label style="width: 200px; font-weight: 500; color: #374151; padding-top: 5px; font-size: 14px;">Status Transaksi:</label>
-                <div class="status-group" style="display: flex; gap: 30px; margin-top: 10px; margin-bottom: 20px; padding-left: 20px;">
-                    <label class="checkbox-item" style="display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 14px;"><input type="checkbox" name="status" value="Berhasil" style="width: 18px; height: 18px; cursor: pointer; accent-color: #166534;"> Berhasil</label>
-                    <label class="checkbox-item" style="display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 14px;"><input type="checkbox" name="status" value="Gagal" style="width: 18px; height: 18px; cursor: pointer; accent-color: #166534;"> Gagal</label>
-                    <label class="checkbox-item" style="display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 14px;"><input type="checkbox" name="status" value="Pending" style="width: 18px; height: 18px; cursor: pointer; accent-color: #166534;"> Pending</label>
+            <div class="section-title-form">D. KONFIRMASI TRANSAKSI</div>
+            <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+                <label style="width: 220px; font-weight: 600; color: var(--gray-700); font-size: 14px; padding-top: 5px;">Status Transaksi:</label>
+                <div class="status-group" style="padding-left: 0; margin: 0;">
+                    <label class="checkbox-item"><input type="checkbox" name="status" value="Berhasil"> Berhasil</label>
+                    <label class="checkbox-item"><input type="checkbox" name="status" value="Gagal"> Gagal</label>
+                    <label class="checkbox-item"><input type="checkbox" name="status" value="Pending"> Pending</label>
                 </div>
             </div>
-            <div class="form-group" style="display: flex; margin-bottom: 15px; align-items: flex-end;">
-                <label style="width: 200px; font-weight: 500; color: #374151; flex-shrink: 0; font-size: 14px;">Nomor Referensi</label><div class="separator" style="width: 15px; text-align: center; font-weight: bold;">:</div>
-                <input type="text" placeholder="Diisi oleh petugas agen" style="flex-grow: 1; padding: 8px; border: none; border-bottom: 1px solid #9ca3af; background-color: transparent; font-family: inherit; font-size: 15px; outline: none;">
+            <div class="form-group">
+                <label>Nomor Referensi</label><div class="separator">:</div>
+                <input type="text" id="inputReferensi" placeholder="Diisi oleh petugas agen">
             </div>
 
             <!-- Tombol Aksi -->
-            <div class="action-buttons" style="margin-top: 40px; display: flex; justify-content: flex-end; gap: 15px;">
-                <button class="btn btn-print" onclick="window.print()" style="padding: 10px 24px; border: none; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; transition: background-color 0.3s; background-color: #e5e7eb; color: #374151;">Cetak Formulir</button>
-                <button class="btn btn-submit" onclick="alert('Data siap diproses!')" style="padding: 10px 24px; border: none; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; transition: background-color 0.3s; background-color: #1e3a8a; color: white;">Simpan Data</button>
+            <div class="action-buttons">
+                <button class="btn btn-print" onclick="window.print()">Cetak Formulir</button>
+                <!-- Tombol ini memanggil fungsi kirimKeWhatsApp() -->
+                <button class="btn btn-wa-submit" onclick="kirimKeWhatsApp()">
+                    <i class="fab fa-whatsapp"></i> Kirim ke WhatsApp
+                </button>
             </div>
         </div>
     </section>
@@ -608,7 +606,7 @@
                     <h4 data-id="Kontak" data-en="Contact">Kontak</h4>
                     <div class="footer-contact-item">
                         <i class="fab fa-whatsapp"></i>
-                        <span data-id="Bu Tantri: 089529405114<br>Bu Isti: 081802766019" data-en="Bu Tantri: 08212024465<br>Bu Isti: 081802766019">Bu Tantri: 08212024465<br>Bu Isti: 081802766019</span>
+                        <span data-id="Bu Tantri: 08212024465<br>Bu Isti: 081802766019" data-en="Bu Tantri: 08212024465<br>Bu Isti: 081802766019">Bu Tantri: 08212024465<br>Bu Isti: 081802766019</span>
                     </div>
                     <div class="footer-contact-item">
                         <i class="fas fa-map-marker-alt"></i>
@@ -659,59 +657,7 @@
         }
     </script>
 
-    <!-- Script Formulir Transaksi (Buka & Tutup) -->
-    <script>
-        function bukaFormulir(jenisLayanan, namaPetugas) {
-            // 1. Sembunyikan bagian atas (Navbar, Hero, About, Features, Services)
-            document.querySelector('.navbar').style.display = 'none';
-            document.querySelector('.hero').style.display = 'none';
-            document.querySelector('.about').style.display = 'none';
-            document.querySelector('.features').style.display = 'none';
-            document.querySelector('.services').style.display = 'none';
-
-            // 2. Tampilkan bagian formulir
-            const formSection = document.getElementById('formSection');
-            formSection.style.display = 'block';
-
-            // 3. Tampilkan info petugas yang dipilih
-            document.getElementById('petugasInfo').innerText = "Petugas: " + namaPetugas;
-
-            // 4. Set tanggal otomatis ke hari ini
-            document.getElementById('tanggal').valueAsDate = new Date();
-
-            // 5. Reset semua checkbox terlebih dahulu
-            const checkboxes = document.querySelectorAll('#jenis-transaksi input[type="checkbox"]');
-            checkboxes.forEach(cb => cb.checked = false);
-
-            // 6. Centang otomatis checkbox sesuai layanan yang diklik
-            if (jenisLayanan === 'Aktivasi Rekening Baru') document.getElementById('cb-aktivasi').checked = true;
-            if (jenisLayanan === 'Cek Saldo') document.getElementById('cb-ceksaldo').checked = true;
-            if (jenisLayanan === 'Setoran Tunai') document.getElementById('cb-setoran').checked = true;
-            if (jenisLayanan === 'Tarik Tunai') document.getElementById('cb-tarik').checked = true;
-            if (jenisLayanan === 'Transfer') document.getElementById('cb-transfer').checked = true;
-            if (jenisLayanan === 'Pembayaran') document.getElementById('cb-pembayaran').checked = true;
-            if (jenisLayanan === 'Pembelian') document.getElementById('cb-pembelian').checked = true;
-
-            // 7. Gulir layar ke bawah (ke arah formulir)
-            formSection.scrollIntoView({ behavior: 'smooth' });
-        }
-
-        function tutupFormulir() {
-            // 1. Sembunyikan formulir
-            document.getElementById('formSection').style.display = 'none';
-
-            // 2. Munculkan kembali bagian atas
-            document.querySelector('.navbar').style.display = 'block'; // atau flex tergantung CSS Anda
-            document.querySelector('.hero').style.display = 'block';
-            document.querySelector('.about').style.display = 'block';
-            document.querySelector('.features').style.display = 'block';
-            document.querySelector('.services').style.display = 'block';
-
-            // 3. Gulir ke atas
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    </script>
-
+    <!-- Hubungkan ke file script.js (yang berisi fungsi bukaFormulir, tutupFormulir, dan kirimKeWhatsApp) -->
     <script src="script.js"></script>
 </body>
 </html>

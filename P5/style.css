@@ -1480,10 +1480,10 @@ img {
 .reveal-delay-5 { transition-delay: 0.5s; }
 
 /* ============================================
-   FORMULIR TRANSAKSI (STYLE BARU)
+   FORMULIR TRANSAKSI
    ============================================ */
 .form-section {
-    padding: 100px 24px;
+    padding: 120px 24px 60px; /* Padding atas ditambah agar tidak tertutup navbar */
     background: var(--gray-100);
     min-height: 100vh;
     display: flex;
@@ -1688,6 +1688,18 @@ img {
     gap: 16px;
     border-top: 1px dashed var(--gray-300);
     padding-top: 32px;
+}
+
+/* Tombol Khusus Kirim WA */
+.btn-wa-submit {
+    background: linear-gradient(135deg, var(--whatsapp), var(--whatsapp-dark));
+    color: var(--white);
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.btn-wa-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
 }
 
 /* ============================================
