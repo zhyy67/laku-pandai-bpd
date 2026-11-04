@@ -156,11 +156,11 @@ img {
     flex-shrink: 0;
 }
 
-/* PENGATURAN LOGO (Tanpa Background, Ukuran Pas) */
+/* PENGATURAN LOGO */
 .logo-icon {
     width: 50px; 
     height: 50px; 
-    background: var(--white); /* Latar putih agar logo biru terlihat */
+    background: var(--white); 
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -569,12 +569,12 @@ img {
 .hero-card-icon {
     width: 75px;
     height: 75px;
-    background: var(--white); /* Wajib putih agar logo biru terlihat */
+    background: var(--white); 
     border-radius: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8px; /* Jarak agar gambar tidak mepet pinggir */
+    padding: 8px; 
     box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
 }
 
@@ -1747,4 +1747,12 @@ img {
 .nav-overlay.active {
     opacity: 1;
     visibility: visible;
+}
+
+/* ============================================
+   FILTER LOGO BPD (Menjadi Putih)
+   ============================================ */
+.logo-icon img, 
+.hero-card-icon img {
+    filter: brightness(0) invert(1); /* Membuat logo berwarna putih */
 }
