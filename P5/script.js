@@ -230,3 +230,86 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('📋 FAQ Accordion: Interactive');
     console.log('🗺️  Location Map: Embedded');
 });
+
+
+// ==========================================
+// FUNGSI FORMULIR TRANSAKSI (BARU)
+// ==========================================
+
+/**
+ * Fungsi untuk membuka formulir, menyembunyikan halaman utama,
+ * dan otomatis mencentang jenis transaksi.
+ */
+function bukaFormulir(jenisLayanan, namaPetugas) {
+    // 1. Sembunyikan semua section utama
+    const sectionsToHide = ['.navbar', '.hero', '.about', '.features', '.services', '.procedure', '.location', '.faq', '.cta', '.footer'];
+    sectionsToHide.forEach(selector => {
+        const el = document.querySelector(selector);
+        if (el) el.style.display = 'none';
+    });
+
+    // 2. Tampilkan bagian formulir
+    const formSection = document.getElementById('formSection');
+    if (formSection) {
+        formSection.style.display = 'block';
+    }
+
+    // 3. Tampilkan info petugas yang dipilih
+    const petugasInfo = document.getElementById('petugasInfo');
+    if (petugasInfo) {
+        petugasInfo.innerText = "Petugas: " + namaPetugas;
+    }
+
+    // 4. Set tanggal otomatis ke hari ini
+    const tanggalInput = document.getElementById('tanggal');
+    if (tanggalInput) {
+        tanggalInput.valueAsDate = new Date();
+    }
+
+    // 5. Reset semua checkbox terlebih dahulu
+    const checkboxes = document.querySelectorAll('#jenis-transaksi input[type="checkbox"]');
+    checkboxes.forEach(cb => cb.checked = false);
+
+    // 6. Centang otomatis checkbox sesuai layanan yang diklik
+    if (jenisLayanan === 'Aktivasi Rekening Baru') document.getElementById('cb-aktivasi').checked = true;
+    if (jenisLayanan === 'Cek Saldo') document.getElementById('cb-ceksaldo').checked = true;
+    if (jenisLayanan === 'Setoran Tunai') document.getElementById('cb-setoran').checked = true;
+    if (jenisLayanan === 'Tarik Tunai') document.getElementById('cb-tarik').checked = true;
+    if (jenisLayanan === 'Transfer') document.getElementById('cb-transfer').checked = true;
+    if (jenisLayanan === 'Pembayaran') document.getElementById('cb-pembayaran').checked = true;
+    if (jenisLayanan === 'Pembelian') document.getElementById('cb-pembelian').checked = true;
+
+    // 7. Gulir layar ke atas dengan halus
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/**
+ * Fungsi untuk menutup formulir dan mengembalikan tampilan halaman utama.
+ */
+function tutupFormulir() {
+    // 1. Sembunyikan formulir
+    const formSection = document.getElementById('formSection');
+    if (formSection) {
+        formSection.style.display = 'none';
+    }
+
+    // 2. Munculkan kembali semua section utama
+    const sectionsToShow = ['.navbar', '.hero', '.about', '.features', '.services', '.procedure', '.location', '.faq', '.cta', '.footer'];
+    sectionsToShow.forEach(selector => {
+        const el = document.querySelector(selector);
+        if (el) {
+            // Navbar butuh display: flex, section lain block
+            if (selector === '.navbar') {
+                el.style.display = 'block'; 
+            } else {
+                el.style.display = 'block';
+            }
+        }
+    });
+
+    // 3. Gulir kembali ke bagian layanan (agar user tidak bingung)
+    const servicesSection = document.getElementById('services');
+    if (servicesSection) {
+        servicesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+}

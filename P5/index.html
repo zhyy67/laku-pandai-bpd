@@ -44,9 +44,6 @@
                     <button onclick="setLanguage('id')" class="btn-lang active" id="btn-id" style="background: none; border: 1px solid var(--gold-400); color: var(--gold-400); padding: 5px 10px; border-radius: 4px; cursor: pointer; font-weight: 600;">ID</button>
                     <button onclick="setLanguage('en')" class="btn-lang" id="btn-en" style="background: none; border: 1px solid var(--gray-500); color: var(--gray-400); padding: 5px 10px; border-radius: 4px; cursor: pointer; font-weight: 600;">EN</button>
                 </li>
-
-                <!-- TOMBOL CTA GANDA DI MENU MOBILE -->
-                
             </ul>
 
             <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -81,8 +78,6 @@
                     <a href="#services" class="btn btn-primary" data-id="Lihat Layanan" data-en="View Services">
                         <i class="fas fa-th-large"></i> Lihat Layanan
                     </a>
-                    <!-- DUA TOMBOL HUBUNGI AGEN DI HERO -->
-                    
                 </div>
                 <div class="hero-stats">
                     <div class="hero-stat">
@@ -106,7 +101,6 @@
             <div class="hero-visual">
                 <div class="hero-illustration">
                     <div class="hero-main-card">
-                        <!-- LOGO BPD DI KARTU TENGAH -->
                         <div class="hero-card-icon">
                             <img src="logo-bpd.png" alt="Logo BPD">
                         </div>
@@ -221,63 +215,207 @@
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- ========================================================= -->
+    <!-- SERVICES SECTION (SUDAH DIEDIT) -->
+    <!-- ========================================================= -->
     <section class="services" id="services">
         <div class="container">
             <div class="section-header">
                 <span class="section-badge" data-id="Layanan Kami" data-en="Our Services">Layanan Kami</span>
                 <h2 class="section-title" data-id="Layanan Agen Laku Pandai<br>BPD SMKN 1 Bantul" data-en="BPD Smart Agent Services<br>SMKN 1 Bantul">Layanan Agen Laku Pandai<br>BPD SMKN 1 Bantul</h2>
-                <p class="section-subtitle" data-id="Berbagai layanan perbankan untuk memenuhi kebutuhan Anda" data-en="Various banking services to meet your needs">Berbagai layanan perbankan untuk memenuhi kebutuhan Anda</p>
+                <p class="section-subtitle" data-id="Pilih layanan di bawah ini untuk memproses transaksi Anda" data-en="Choose a service below to process your transaction">Pilih layanan di bawah ini untuk memproses transaksi Anda</p>
             </div>
             <div class="services-grid">
-                <!-- Layanan 1 -->
+                <!-- Layanan 1: Aktivasi Rekening Baru -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h3 data-id="Aktivasi Rekening Baru" data-en="New Account Activation">Aktivasi Rekening Baru</h3>
+                    <p data-id="Pembukaan rekening nasabah BSA (Buku Simpanan Anda) langsung di agen." data-en="Opening a BSA customer account directly at the agent.">Pembukaan rekening nasabah BSA (Buku Simpanan Anda) langsung di agen.</p>
+                    <div style="display: flex; gap: 8px; justify-content: center; margin-top: 12px;">
+                        <button onclick="bukaFormulir('Aktivasi Rekening Baru', 'Bu Tantri')" class="btn-service" style="margin-top: 0;"><i class="fas fa-file-alt"></i> Bu Tantri</button>
+                        <button onclick="bukaFormulir('Aktivasi Rekening Baru', 'Bu Isti')" class="btn-service" style="margin-top: 0;"><i class="fas fa-file-alt"></i> Bu Isti</button>
+                    </div>
+                </div>
+
+                <!-- Layanan 2: Informasi Rekening -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-search-dollar"></i>
+                    </div>
+                    <h3 data-id="Informasi Rekening" data-en="Account Information">Informasi Rekening</h3>
+                    <p data-id="Cek saldo agen & nasabah BSA, log transaksi, serta status transaksi." data-en="Check agent & BSA customer balances, transaction logs, and transaction status.">Cek saldo agen & nasabah BSA, log transaksi, serta status transaksi.</p>
+                    <div style="display: flex; gap: 8px; justify-content: center; margin-top: 12px;">
+                        <button onclick="bukaFormulir('Cek Saldo', 'Bu Tantri')" class="btn-service" style="margin-top: 0;"><i class="fas fa-file-alt"></i> Bu Tantri</button>
+                        <button onclick="bukaFormulir('Cek Saldo', 'Bu Isti')" class="btn-service" style="margin-top: 0;"><i class="fas fa-file-alt"></i> Bu Isti</button>
+                    </div>
+                </div>
+
+                <!-- Layanan 3: Setor Tunai -->
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-piggy-bank"></i>
                     </div>
-                    <h3 data-id="Informasi Simpanan Siswa" data-en="Student Savings Information">Informasi Simpanan Siswa</h3>
-                    <p data-id="Informasi dan layanan terkait tabungan dan simpanan siswa. Detail layanan dapat dikonfirmasi langsung kepada petugas agen." data-en="Information and services related to student savings. Service details can be confirmed directly with the agent.">Informasi dan layanan terkait tabungan dan simpanan siswa. Detail layanan dapat dikonfirmasi langsung kepada petugas agen.</p>
+                    <h3 data-id="Setor Tunai" data-en="Cash Deposit">Setor Tunai</h3>
+                    <p data-id="Setor tunai untuk nasabah BSA maupun nasabah reguler." data-en="Cash deposit for BSA customers and regular customers.">Setor tunai untuk nasabah BSA maupun nasabah reguler.</p>
                     <div style="display: flex; gap: 8px; justify-content: center; margin-top: 12px;">
-                        <a href="https://wa.me/628212024465?text=Halo%20Bu%20Tantri%2C%20saya%20ingin%20tahu%20tentang%20layanan%20simpanan%20siswa" class="btn-service" target="_blank" rel="noopener" style="margin-top: 0;"><i class="fab fa-whatsapp"></i> Bu Tantri</a>
-                        <a href="https://wa.me/6281802766019?text=Halo%20Bu%20Isti%2C%20saya%20ingin%20tahu%20tentang%20layanan%20simpanan%20siswa" class="btn-service" target="_blank" rel="noopener" style="margin-top: 0;"><i class="fab fa-whatsapp"></i> Bu Isti</a>
+                        <button onclick="bukaFormulir('Setoran Tunai', 'Bu Tantri')" class="btn-service" style="margin-top: 0;"><i class="fas fa-file-alt"></i> Bu Tantri</button>
+                        <button onclick="bukaFormulir('Setoran Tunai', 'Bu Isti')" class="btn-service" style="margin-top: 0;"><i class="fas fa-file-alt"></i> Bu Isti</button>
                     </div>
                 </div>
-                <!-- Layanan 2 -->
+
+                <!-- Layanan 4: Tarik Tunai -->
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-money-bill-transfer"></i>
+                        <i class="fas fa-money-bill-wave"></i>
                     </div>
-                    <h3 data-id="Layanan Transaksi Perbankan" data-en="Banking Transaction Services">Layanan Transaksi Perbankan</h3>
-                    <p data-id="Berbagai transaksi perbankan dapat dilakukan di agen. Jenis transaksi yang tersedia dapat dikonfirmasi langsung kepada petugas agen." data-en="Various banking transactions can be done at the agent. Available transaction types can be confirmed directly with the agent.">Berbagai transaksi perbankan dapat dilakukan di agen. Jenis transaksi yang tersedia dapat dikonfirmasi langsung kepada petugas agen.</p>
+                    <h3 data-id="Tarik Tunai" data-en="Cash Withdrawal">Tarik Tunai</h3>
+                    <p data-id="Tarik tunai untuk nasabah BSA, termasuk tarik tunai tanpa kartu." data-en="Cash withdrawal for BSA customers, including cardless cash withdrawal.">Tarik tunai untuk nasabah BSA, termasuk tarik tunai tanpa kartu.</p>
                     <div style="display: flex; gap: 8px; justify-content: center; margin-top: 12px;">
-                        <a href="https://wa.me/628212024465?text=Halo%20Bu%20Tantri%2C%20saya%20ingin%20tahu%20tentang%20transaksi%20perbankan" class="btn-service" target="_blank" rel="noopener" style="margin-top: 0;"><i class="fab fa-whatsapp"></i> Bu Tantri</a>
-                        <a href="https://wa.me/6281802766019?text=Halo%20Bu%20Isti%2C%20saya%20ingin%20tahu%20tentang%20transaksi%20perbankan" class="btn-service" target="_blank" rel="noopener" style="margin-top: 0;"><i class="fab fa-whatsapp"></i> Bu Isti</a>
+                        <button onclick="bukaFormulir('Tarik Tunai', 'Bu Tantri')" class="btn-service" style="margin-top: 0;"><i class="fas fa-file-alt"></i> Bu Tantri</button>
+                        <button onclick="bukaFormulir('Tarik Tunai', 'Bu Isti')" class="btn-service" style="margin-top: 0;"><i class="fas fa-file-alt"></i> Bu Isti</button>
                     </div>
                 </div>
-                <!-- Layanan 3 -->
+
+                <!-- Layanan 5: Transfer Dana -->
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-receipt"></i>
+                        <i class="fas fa-exchange-alt"></i>
                     </div>
-                    <h3 data-id="Pembayaran" data-en="Payment">Pembayaran</h3>
-                    <p data-id="Layanan pembayaran yang tersedia di agen. Jenis pembayaran yang dapat dilakukan perlu dikonfirmasi langsung kepada petugas agen." data-en="Payment services available at the agent. The types of payments that can be made need to be confirmed directly with the agent.">Layanan pembayaran yang tersedia di agen. Jenis pembayaran yang dapat dilakukan perlu dikonfirmasi langsung kepada petugas agen.</p>
+                    <h3 data-id="Transfer Dana" data-en="Fund Transfer">Transfer Dana</h3>
+                    <p data-id="Transfer sesama rekening BPD DIY, ke rekening nasabah BSA, atau antar bank." data-en="Transfer between BPD DIY accounts, to BSA customer accounts, or between banks.">Transfer sesama rekening BPD DIY, ke rekening nasabah BSA, atau antar bank.</p>
                     <div style="display: flex; gap: 8px; justify-content: center; margin-top: 12px;">
-                        <a href="https://wa.me/628212024465?text=Halo%20Bu%20Tantri%2C%20saya%20ingin%20tahu%20tentang%20layanan%20pembayaran" class="btn-service" target="_blank" rel="noopener" style="margin-top: 0;"><i class="fab fa-whatsapp"></i> Bu Tantri</a>
-                        <a href="https://wa.me/6281802766019?text=Halo%20Bu%20Isti%2C%20saya%20ingin%20tahu%20tentang%20layanan%20pembayaran" class="btn-service" target="_blank" rel="noopener" style="margin-top: 0;"><i class="fab fa-whatsapp"></i> Bu Isti</a>
+                        <button onclick="bukaFormulir('Transfer', 'Bu Tantri')" class="btn-service" style="margin-top: 0;"><i class="fas fa-file-alt"></i> Bu Tantri</button>
+                        <button onclick="bukaFormulir('Transfer', 'Bu Isti')" class="btn-service" style="margin-top: 0;"><i class="fas fa-file-alt"></i> Bu Isti</button>
                     </div>
                 </div>
-                <!-- Layanan 4 -->
+
+                <!-- Layanan 6: Pembelian Pulsa -->
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-comments"></i>
+                        <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <h3 data-id="Konsultasi dan Informasi Perbankan" data-en="Consultation and Banking Information">Konsultasi dan Informasi Perbankan</h3>
-                    <p data-id="Dapatkan konsultasi dan informasi seputar layanan perbankan BPD DIY. Tim agen siap membantu menjawab pertanyaan Anda." data-en="Get consultation and information about BPD DIY banking services. The agent team is ready to help answer your questions.">Dapatkan konsultasi dan informasi seputar layanan perbankan BPD DIY. Tim agen siap membantu menjawab pertanyaan Anda.</p>
+                    <h3 data-id="Pembelian Pulsa" data-en="Pulsa Purchase">Pembelian Pulsa</h3>
+                    <p data-id="Layanan pembelian pulsa untuk semua provider Telkomsel dan XL." data-en="Pulsa purchase service for all Telkomsel and XL providers.">Layanan pembelian pulsa untuk semua provider Telkomsel dan XL.</p>
                     <div style="display: flex; gap: 8px; justify-content: center; margin-top: 12px;">
-                        <a href="https://wa.me/628212024465?text=Halo%20Bu%20Tantri%2C%20saya%20ingin%20konsultasi" class="btn-service" target="_blank" rel="noopener" style="margin-top: 0;"><i class="fab fa-whatsapp"></i> Bu Tantri</a>
-                        <a href="https://wa.me/6281802766019?text=Halo%20Bu%20Isti%2C%20saya%20ingin%20konsultasi" class="btn-service" target="_blank" rel="noopener" style="margin-top: 0;"><i class="fab fa-whatsapp"></i> Bu Isti</a>
+                        <button onclick="bukaFormulir('Pembelian', 'Bu Tantri')" class="btn-service" style="margin-top: 0;"><i class="fas fa-file-alt"></i> Bu Tantri</button>
+                        <button onclick="bukaFormulir('Pembelian', 'Bu Isti')" class="btn-service" style="margin-top: 0;"><i class="fas fa-file-alt"></i> Bu Isti</button>
                     </div>
                 </div>
+
+                <!-- Layanan 7: Pembayaran Tagihan -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3 data-id="Pembayaran Tagihan" data-en="Bill Payment">Pembayaran Tagihan</h3>
+                    <p data-id="Bayar PBB, Retribusi, PDAM, Tiket Kereta Api, Pajak Daerah, Samsat, Asuransi (BPJS), Telepon/Internet (Telkom)." data-en="Pay property tax, retribution, water bill, train tickets, regional tax, Samsat, insurance (BPJS), telephone/internet (Telkom).">Bayar PBB, Retribusi, PDAM, Tiket Kereta Api, Pajak Daerah, Samsat, Asuransi (BPJS), Telepon/Internet (Telkom).</p>
+                    <div style="display: flex; gap: 8px; justify-content: center; margin-top: 12px;">
+                        <button onclick="bukaFormulir('Pembayaran', 'Bu Tantri')" class="btn-service" style="margin-top: 0;"><i class="fas fa-file-alt"></i> Bu Tantri</button>
+                        <button onclick="bukaFormulir('Pembayaran', 'Bu Isti')" class="btn-service" style="margin-top: 0;"><i class="fas fa-file-alt"></i> Bu Isti</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- FORMULIR TRANSAKSI (Tersembunyi, Muncul saat tombol diklik) -->
+    <!-- ========================================================= -->
+    <section class="form-section" id="formSection" style="display: none; padding: 40px 20px; background-color: #e2e8f0;">
+        <div class="form-container" style="background-color: #ffffff; max-width: 800px; margin: 0 auto; padding: 40px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); position: relative;">
+            
+            <!-- Tombol Tutup -->
+            <button class="close-btn" onclick="tutupFormulir()" style="position: absolute; top: 20px; right: 20px; background: #fee2e2; color: #ef4444; border: none; width: 30px; height: 30px; border-radius: 50%; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: 0.3s;">X</button>
+            
+            <div class="form-header" style="text-align: center; border-bottom: 2px solid #1e3a8a; padding-bottom: 20px; margin-bottom: 30px;">
+                <h1 style="margin: 0 0 5px 0; color: #1e3a8a; font-size: 24px; text-transform: uppercase;">Formulir Transaksi</h1>
+                <h2 style="margin: 0; color: #4b5563; font-size: 16px; font-weight: normal; font-style: italic;">Laku Pandai BPD DIY – SMK N 1 Bantul</h2>
+                <p id="petugasInfo" style="margin-top:10px; font-weight:bold; color:#1e3a8a;"></p>
+            </div>
+
+            <!-- A. DATA NASABAH -->
+            <div class="section-title" style="background-color: #f0fdf4; color: #166534; padding: 8px 12px; font-weight: bold; border-left: 4px solid #22c55e; margin-top: 30px; margin-bottom: 20px; font-size: 16px;">A. DATA NASABAH</div>
+            <div class="form-group" style="display: flex; margin-bottom: 15px; align-items: flex-end;">
+                <label style="width: 200px; font-weight: 500; color: #374151; flex-shrink: 0; font-size: 14px;">Nama Nasabah</label><div class="separator" style="width: 15px; text-align: center; font-weight: bold;">:</div>
+                <input type="text" placeholder="Masukkan nama lengkap" style="flex-grow: 1; padding: 8px; border: none; border-bottom: 1px solid #9ca3af; background-color: transparent; font-family: inherit; font-size: 15px; outline: none;">
+            </div>
+            <div class="form-group" style="display: flex; margin-bottom: 15px; align-items: flex-end;">
+                <label style="width: 200px; font-weight: 500; color: #374151; flex-shrink: 0; font-size: 14px;">Nomor Rekening</label><div class="separator" style="width: 15px; text-align: center; font-weight: bold;">:</div>
+                <input type="text" placeholder="Masukkan nomor rekening" style="flex-grow: 1; padding: 8px; border: none; border-bottom: 1px solid #9ca3af; background-color: transparent; font-family: inherit; font-size: 15px; outline: none;">
+            </div>
+            <div class="form-group" style="display: flex; margin-bottom: 15px; align-items: flex-end;">
+                <label style="width: 200px; font-weight: 500; color: #374151; flex-shrink: 0; font-size: 14px;">NIK</label><div class="separator" style="width: 15px; text-align: center; font-weight: bold;">:</div>
+                <input type="text" placeholder="Masukkan NIK (16 digit)" style="flex-grow: 1; padding: 8px; border: none; border-bottom: 1px solid #9ca3af; background-color: transparent; font-family: inherit; font-size: 15px; outline: none;">
+            </div>
+            <div class="form-group" style="display: flex; margin-bottom: 15px; align-items: flex-end;">
+                <label style="width: 200px; font-weight: 500; color: #374151; flex-shrink: 0; font-size: 14px;">Nomor HP</label><div class="separator" style="width: 15px; text-align: center; font-weight: bold;">:</div>
+                <input type="text" placeholder="Masukkan nomor HP aktif" style="flex-grow: 1; padding: 8px; border: none; border-bottom: 1px solid #9ca3af; background-color: transparent; font-family: inherit; font-size: 15px; outline: none;">
+            </div>
+            <div class="form-group" style="display: flex; margin-bottom: 15px; align-items: flex-end;">
+                <label style="width: 200px; font-weight: 500; color: #374151; flex-shrink: 0; font-size: 14px;">Tanggal Transaksi</label><div class="separator" style="width: 15px; text-align: center; font-weight: bold;">:</div>
+                <input type="date" id="tanggal" style="flex-grow: 1; padding: 8px; border: none; border-bottom: 1px solid #9ca3af; background-color: transparent; font-family: inherit; font-size: 15px; outline: none;">
+            </div>
+
+            <!-- B. JENIS TRANSAKSI -->
+            <div class="section-title" style="background-color: #f0fdf4; color: #166534; padding: 8px 12px; font-weight: bold; border-left: 4px solid #22c55e; margin-top: 30px; margin-bottom: 20px; font-size: 16px;">B. JENIS TRANSAKSI</div>
+            <p style="margin: 0 0 10px 20px; font-size: 14px; color: #6b7280;">Beri tanda centang (✓) pada jenis transaksi:</p>
+            <div class="checkbox-grid" id="jenis-transaksi" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-top: 10px; margin-bottom: 20px; padding-left: 20px;">
+                <label class="checkbox-item" style="display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 14px;"><input type="checkbox" name="jenis" value="Aktivasi Rekening Baru" id="cb-aktivasi" style="width: 18px; height: 18px; cursor: pointer; accent-color: #166534;"> Aktivasi Rekening Baru</label>
+                <label class="checkbox-item" style="display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 14px;"><input type="checkbox" name="jenis" value="Cek Saldo" id="cb-ceksaldo" style="width: 18px; height: 18px; cursor: pointer; accent-color: #166534;"> Cek Saldo / Info</label>
+                <label class="checkbox-item" style="display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 14px;"><input type="checkbox" name="jenis" value="Setoran Tunai" id="cb-setoran" style="width: 18px; height: 18px; cursor: pointer; accent-color: #166534;"> Setoran Tunai</label>
+                <label class="checkbox-item" style="display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 14px;"><input type="checkbox" name="jenis" value="Tarik Tunai" id="cb-tarik" style="width: 18px; height: 18px; cursor: pointer; accent-color: #166534;"> Tarik Tunai</label>
+                <label class="checkbox-item" style="display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 14px;"><input type="checkbox" name="jenis" value="Transfer" id="cb-transfer" style="width: 18px; height: 18px; cursor: pointer; accent-color: #166534;"> Transfer Dana</label>
+                <label class="checkbox-item" style="display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 14px;"><input type="checkbox" name="jenis" value="Pembayaran" id="cb-pembayaran" style="width: 18px; height: 18px; cursor: pointer; accent-color: #166534;"> Pembayaran</label>
+                <label class="checkbox-item" style="display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 14px;"><input type="checkbox" name="jenis" value="Pembelian" id="cb-pembelian" style="width: 18px; height: 18px; cursor: pointer; accent-color: #166534;"> Pembelian</label>
+            </div>
+
+            <!-- C. DETAIL TRANSAKSI -->
+            <div class="section-title" style="background-color: #f0fdf4; color: #166534; padding: 8px 12px; font-weight: bold; border-left: 4px solid #22c55e; margin-top: 30px; margin-bottom: 20px; font-size: 16px;">C. DETAIL TRANSAKSI</div>
+            <div class="form-group" style="display: flex; margin-bottom: 15px; align-items: flex-end;">
+                <label style="width: 200px; font-weight: 500; color: #374151; flex-shrink: 0; font-size: 14px;">Nominal Transaksi</label><div class="separator" style="width: 15px; text-align: center; font-weight: bold;">:</div>
+                <div style="display:flex; align-items:center; flex-grow:1; border-bottom: 1px solid #9ca3af;">
+                    <span style="padding-right: 5px; font-weight: bold; color:#4b5563;">Rp</span>
+                    <input type="text" style="border-bottom:none; width:100%; flex-grow: 1; padding: 8px; background-color: transparent; font-family: inherit; font-size: 15px; outline: none;" placeholder="0">
+                </div>
+            </div>
+            <div class="form-group" style="display: flex; margin-bottom: 15px; align-items: flex-end;">
+                <label style="width: 200px; font-weight: 500; color: #374151; flex-shrink: 0; font-size: 14px;">Nama Bank Tujuan</label><div class="separator" style="width: 15px; text-align: center; font-weight: bold;">:</div>
+                <input type="text" placeholder="Contoh: BPD DIY, BCA, Mandiri, dll" style="flex-grow: 1; padding: 8px; border: none; border-bottom: 1px solid #9ca3af; background-color: transparent; font-family: inherit; font-size: 15px; outline: none;">
+            </div>
+            <div class="form-group" style="display: flex; margin-bottom: 15px; align-items: flex-end;">
+                <label style="width: 200px; font-weight: 500; color: #374151; flex-shrink: 0; font-size: 14px;">Nomor Rekening Tujuan</label><div class="separator" style="width: 15px; text-align: center; font-weight: bold;">:</div>
+                <input type="text" placeholder="Masukkan nomor rekening tujuan" style="flex-grow: 1; padding: 8px; border: none; border-bottom: 1px solid #9ca3af; background-color: transparent; font-family: inherit; font-size: 15px; outline: none;">
+            </div>
+            <div class="form-group" style="display: flex; margin-bottom: 15px; align-items: flex-end;">
+                <label style="width: 200px; font-weight: 500; color: #374151; flex-shrink: 0; font-size: 14px;">Nama Penerima</label><div class="separator" style="width: 15px; text-align: center; font-weight: bold;">:</div>
+                <input type="text" placeholder="Masukkan nama penerima" style="flex-grow: 1; padding: 8px; border: none; border-bottom: 1px solid #9ca3af; background-color: transparent; font-family: inherit; font-size: 15px; outline: none;">
+            </div>
+            <div class="textarea-group" style="display: flex; flex-direction: column; margin-bottom: 15px;">
+                <label style="font-weight: 500; color: #374151; margin-bottom: 5px; font-size: 14px;">Keterangan :</label>
+                <textarea placeholder="Tambahkan catatan tambahan jika diperlukan..." style="width: 100%; padding: 10px; border: 1px solid #d1d5db; border-radius: 4px; font-family: inherit; font-size: 15px; resize: vertical; min-height: 80px; box-sizing: border-box;"></textarea>
+            </div>
+
+            <!-- D. KONFIRMASI TRANSAKSI -->
+            <div class="section-title" style="background-color: #f0fdf4; color: #166534; padding: 8px 12px; font-weight: bold; border-left: 4px solid #22c55e; margin-top: 30px; margin-bottom: 20px; font-size: 16px;">D. KONFIRMASI TRANSAKSI</div>
+            <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
+                <label style="width: 200px; font-weight: 500; color: #374151; padding-top: 5px; font-size: 14px;">Status Transaksi:</label>
+                <div class="status-group" style="display: flex; gap: 30px; margin-top: 10px; margin-bottom: 20px; padding-left: 20px;">
+                    <label class="checkbox-item" style="display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 14px;"><input type="checkbox" name="status" value="Berhasil" style="width: 18px; height: 18px; cursor: pointer; accent-color: #166534;"> Berhasil</label>
+                    <label class="checkbox-item" style="display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 14px;"><input type="checkbox" name="status" value="Gagal" style="width: 18px; height: 18px; cursor: pointer; accent-color: #166534;"> Gagal</label>
+                    <label class="checkbox-item" style="display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 14px;"><input type="checkbox" name="status" value="Pending" style="width: 18px; height: 18px; cursor: pointer; accent-color: #166534;"> Pending</label>
+                </div>
+            </div>
+            <div class="form-group" style="display: flex; margin-bottom: 15px; align-items: flex-end;">
+                <label style="width: 200px; font-weight: 500; color: #374151; flex-shrink: 0; font-size: 14px;">Nomor Referensi</label><div class="separator" style="width: 15px; text-align: center; font-weight: bold;">:</div>
+                <input type="text" placeholder="Diisi oleh petugas agen" style="flex-grow: 1; padding: 8px; border: none; border-bottom: 1px solid #9ca3af; background-color: transparent; font-family: inherit; font-size: 15px; outline: none;">
+            </div>
+
+            <!-- Tombol Aksi -->
+            <div class="action-buttons" style="margin-top: 40px; display: flex; justify-content: flex-end; gap: 15px;">
+                <button class="btn btn-print" onclick="window.print()" style="padding: 10px 24px; border: none; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; transition: background-color 0.3s; background-color: #e5e7eb; color: #374151;">Cetak Formulir</button>
+                <button class="btn btn-submit" onclick="alert('Data siap diproses!')" style="padding: 10px 24px; border: none; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; transition: background-color 0.3s; background-color: #1e3a8a; color: white;">Simpan Data</button>
             </div>
         </div>
     </section>
@@ -351,7 +489,6 @@
                             <div class="hours-item"><span data-id="Sabtu & Minggu" data-en="Saturday & Sunday">Sabtu & Minggu</span><span data-id="Tutup" data-en="Closed">Tutup</span></div>
                         </div>
                     </div>
-                    <!-- KONTAK DENGAN DUA NOMOR -->
                     <div class="info-card info-card-contact">
                         <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
                         <h3 data-id="Hubungi Kami" data-en="Contact Us">Hubungi Kami</h3>
@@ -367,7 +504,6 @@
                     </div>
                 </div>
                 
-                <!-- Lokasi Map -->
                 <div class="location-map">
                     <div class="map-container">
                         <iframe src="https://maps.google.com/maps?q=SMK%20Negeri%201%20Bantul&t=&z=16&ie=UTF8&iwloc=&output=embed" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -424,7 +560,6 @@
             <div class="cta-content">
                 <h2 class="cta-title" data-id="Butuh Informasi Layanan Perbankan?" data-en="Need Banking Service Information?">Butuh Informasi Layanan Perbankan?</h2>
                 <p class="cta-subtitle" data-id="Tim Agen Laku Pandai BPD SMKN 1 Bantul siap membantu Anda. Hubungi kami sekarang untuk konsultasi gratis." data-en="The BPD Smart Agent SMKN 1 Bantul team is ready to help you. Contact us now for a free consultation.">Tim Agen Laku Pandai BPD SMKN 1 Bantul siap membantu Anda. Hubungi kami sekarang untuk konsultasi gratis.</p>
-                <!-- DUA TOMBOL DI CTA BAWAH -->
                 <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
                     <a href="https://wa.me/628212024465?text=Halo%20Bu%20Tantri%2C%20saya%20ingin%20konsultasi" class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">
                         <i class="fab fa-whatsapp"></i> <span data-id="Hubungi Bu Tantri" data-en="Contact Bu Tantri">Hubungi Bu Tantri</span>
@@ -443,7 +578,6 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <div class="footer-logo">
-                        <!-- LOGO BPD DI FOOTER -->
                         <div class="logo-icon">
                             <img src="logo-bpd.png" alt="Logo BPD DIY">
                         </div>
@@ -498,16 +632,14 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- Script JavaScript untuk Ganti Bahasa -->
+    <!-- Script Ganti Bahasa -->
     <script>
         function setLanguage(lang) {
-            // 1. Ubah semua teks yang memiliki atribut data-id dan data-en
             const elements = document.querySelectorAll('[data-id][data-en]');
             elements.forEach(el => {
                 el.innerHTML = el.getAttribute(`data-${lang}`);
             });
 
-            // 2. Ubah status tombol aktif
             const btnId = document.getElementById('btn-id');
             const btnEn = document.getElementById('btn-en');
 
@@ -524,6 +656,59 @@
                 btnId.style.color = 'var(--gray-400)';
                 document.documentElement.lang = 'en';
             }
+        }
+    </script>
+
+    <!-- Script Formulir Transaksi (Buka & Tutup) -->
+    <script>
+        function bukaFormulir(jenisLayanan, namaPetugas) {
+            // 1. Sembunyikan bagian atas (Navbar, Hero, About, Features, Services)
+            document.querySelector('.navbar').style.display = 'none';
+            document.querySelector('.hero').style.display = 'none';
+            document.querySelector('.about').style.display = 'none';
+            document.querySelector('.features').style.display = 'none';
+            document.querySelector('.services').style.display = 'none';
+
+            // 2. Tampilkan bagian formulir
+            const formSection = document.getElementById('formSection');
+            formSection.style.display = 'block';
+
+            // 3. Tampilkan info petugas yang dipilih
+            document.getElementById('petugasInfo').innerText = "Petugas: " + namaPetugas;
+
+            // 4. Set tanggal otomatis ke hari ini
+            document.getElementById('tanggal').valueAsDate = new Date();
+
+            // 5. Reset semua checkbox terlebih dahulu
+            const checkboxes = document.querySelectorAll('#jenis-transaksi input[type="checkbox"]');
+            checkboxes.forEach(cb => cb.checked = false);
+
+            // 6. Centang otomatis checkbox sesuai layanan yang diklik
+            if (jenisLayanan === 'Aktivasi Rekening Baru') document.getElementById('cb-aktivasi').checked = true;
+            if (jenisLayanan === 'Cek Saldo') document.getElementById('cb-ceksaldo').checked = true;
+            if (jenisLayanan === 'Setoran Tunai') document.getElementById('cb-setoran').checked = true;
+            if (jenisLayanan === 'Tarik Tunai') document.getElementById('cb-tarik').checked = true;
+            if (jenisLayanan === 'Transfer') document.getElementById('cb-transfer').checked = true;
+            if (jenisLayanan === 'Pembayaran') document.getElementById('cb-pembayaran').checked = true;
+            if (jenisLayanan === 'Pembelian') document.getElementById('cb-pembelian').checked = true;
+
+            // 7. Gulir layar ke bawah (ke arah formulir)
+            formSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function tutupFormulir() {
+            // 1. Sembunyikan formulir
+            document.getElementById('formSection').style.display = 'none';
+
+            // 2. Munculkan kembali bagian atas
+            document.querySelector('.navbar').style.display = 'block'; // atau flex tergantung CSS Anda
+            document.querySelector('.hero').style.display = 'block';
+            document.querySelector('.about').style.display = 'block';
+            document.querySelector('.features').style.display = 'block';
+            document.querySelector('.services').style.display = 'block';
+
+            // 3. Gulir ke atas
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
 
