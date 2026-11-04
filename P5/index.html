@@ -41,12 +41,19 @@
                 
                 <!-- TOMBOL BAHASA -->
                 <li class="lang-switch" style="margin-left: 10px; display: flex; gap: 5px;">
-                    <button onclick="setLanguage('id')" class="btn-lang active" id="btn-id" style="background: none; border: 1px solid var(--gold-400); color: var(--gold-400); padding: 5px 10px; border-radius: 4px; cursor: pointer;">ID</button>
-                    <button onclick="setLanguage('en')" class="btn-lang" id="btn-en" style="background: none; border: 1px solid var(--gray-500); color: var(--gray-400); padding: 5px 10px; border-radius: 4px; cursor: pointer;">EN</button>
+                    <button onclick="setLanguage('id')" class="btn-lang active" id="btn-id" style="background: none; border: 1px solid var(--gold-400); color: var(--gold-400); padding: 5px 10px; border-radius: 4px; cursor: pointer; font-weight: 600;">ID</button>
+                    <button onclick="setLanguage('en')" class="btn-lang" id="btn-en" style="background: none; border: 1px solid var(--gray-500); color: var(--gray-400); padding: 5px 10px; border-radius: 4px; cursor: pointer; font-weight: 600;">EN</button>
                 </li>
 
                 <!-- TOMBOL CTA GANDA DI MENU MOBILE -->
-               
+                <li class="nav-cta-mobile">
+                    <a href="https://wa.me/628212024465" class="btn btn-whatsapp" target="_blank" rel="noopener" style="flex: 1; padding: 10px; font-size: 13px;">
+                        <i class="fab fa-whatsapp"></i> Bu Tantri
+                    </a>
+                    <a href="https://wa.me/6281802766019" class="btn btn-whatsapp-outline" target="_blank" rel="noopener" style="flex: 1; padding: 10px; font-size: 13px; background: var(--white);">
+                        <i class="fab fa-whatsapp"></i> Bu Isti
+                    </a>
+                </li>
             </ul>
 
             <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -82,7 +89,14 @@
                         <i class="fas fa-th-large"></i> Lihat Layanan
                     </a>
                     <!-- DUA TOMBOL HUBUNGI AGEN DI HERO -->
-                    
+                    <div style="display: flex; gap: 10px;">
+                        <a href="https://wa.me/628212024465" class="btn btn-whatsapp-outline" target="_blank" rel="noopener">
+                            <i class="fab fa-whatsapp"></i> Bu Tantri
+                        </a>
+                        <a href="https://wa.me/6281802766019" class="btn btn-whatsapp-outline" target="_blank" rel="noopener">
+                            <i class="fab fa-whatsapp"></i> Bu Isti
+                        </a>
+                    </div>
                 </div>
                 <div class="hero-stats">
                     <div class="hero-stat">
@@ -138,7 +152,7 @@
         </div>
     </section>
 
-    <!-- About Section (Anda bisa menambahkan data-id dan data-en di sini nanti) -->
+    <!-- About Section -->
     <section class="about" id="about">
         <div class="container">
             <div class="section-header">
@@ -146,35 +160,357 @@
                 <h2 class="section-title" data-id="Profil Agen Laku Pandai<br>BPD SMKN 1 Bantul" data-en="Profile of BPD Smart Agent<br>SMKN 1 Bantul">Profil Agen Laku Pandai<br>BPD SMKN 1 Bantul</h2>
                 <p class="section-subtitle" data-id="Membawa layanan perbankan BPD DIY lebih dekat ke lingkungan sekolah" data-en="Bringing BPD DIY banking services closer to the school environment">Membawa layanan perbankan BPD DIY lebih dekat ke lingkungan sekolah</p>
             </div>
-            <!-- Konten About tetap sama -->
             <div class="about-content">
                 <div class="about-card">
                     <div class="about-card-icon">
                         <i class="fas fa-building-columns"></i>
                     </div>
-                    <h3>Apa itu Agen Laku Pandai?</h3>
-                    <p>Agen Laku Pandai BPD adalah layanan perbankan alternatif yang disediakan oleh Bank Pegadaian Daerah Istimewa Yogyakarta (BPD DIY) untuk menjangkau masyarakat di lokasi yang terjangkau, termasuk lingkungan sekolah. Melalui agen ini, berbagai transaksi perbankan dapat dilakukan dengan mudah dan aman.</p>
+                    <h3 data-id="Apa itu Agen Laku Pandai?" data-en="What is a Smart Agent?">Apa itu Agen Laku Pandai?</h3>
+                    <p data-id="Agen Laku Pandai BPD adalah layanan perbankan alternatif yang disediakan oleh Bank Pegadaian Daerah Istimewa Yogyakarta (BPD DIY) untuk menjangkau masyarakat di lokasi yang terjangkau, termasuk lingkungan sekolah." data-en="BPD Smart Agent is an alternative banking service provided by Bank Pegadaian Daerah Istimewa Yogyakarta (BPD DIY) to reach people in affordable locations, including the school environment.">Agen Laku Pandai BPD adalah layanan perbankan alternatif yang disediakan oleh Bank Pegadaian Daerah Istimewa Yogyakarta (BPD DIY) untuk menjangkau masyarakat di lokasi yang terjangkau, termasuk lingkungan sekolah.</p>
                 </div>
                 <div class="about-card">
                     <div class="about-card-icon">
                         <i class="fas fa-bullseye"></i>
                     </div>
-                    <h3>Tujuan Keberadaan</h3>
-                    <p>Agen ini hadir untuk memudahkan siswa, orang tua, dan staf SMKN 1 Bantul dalam mengakses layanan perbankan tanpa perlu pergi ke kantor cabang. Dengan adanya agen ini, transaksi keuangan menjadi lebih cepat, mudah, dan terpercaya.</p>
+                    <h3 data-id="Tujuan Keberadaan" data-en="Purpose of Existence">Tujuan Keberadaan</h3>
+                    <p data-id="Agen ini hadir untuk memudahkan siswa, orang tua, dan staf SMKN 1 Bantul dalam mengakses layanan perbankan tanpa perlu pergi ke kantor cabang." data-en="This agent is here to make it easier for students, parents, and staff of SMKN 1 Bantul to access banking services without having to go to a branch office.">Agen ini hadir untuk memudahkan siswa, orang tua, dan staf SMKN 1 Bantul dalam mengakses layanan perbankan tanpa perlu pergi ke kantor cabang.</p>
                 </div>
                 <div class="about-card">
                     <div class="about-card-icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <h3>Manfaat untuk Pengguna</h3>
-                    <p>Bagi siswa, agen ini memudahkan manajemen tabungan dan transaksi keuangan. Orang tua dapat melakukan pembayaran dan transfer dengan lebih mudah. Staf sekolah juga mendapatkan kemudahan akses layanan perbankan tanpa meninggalkan lingkungan kerja.</p>
+                    <h3 data-id="Manfaat untuk Pengguna" data-en="Benefits for Users">Manfaat untuk Pengguna</h3>
+                    <p data-id="Bagi siswa, agen ini memudahkan manajemen tabungan dan transaksi keuangan. Orang tua dapat melakukan pembayaran dan transfer dengan lebih mudah." data-en="For students, this agent makes savings management and financial transactions easier. Parents can make payments and transfers more easily.">Bagi siswa, agen ini memudahkan manajemen tabungan dan transaksi keuangan. Orang tua dapat melakukan pembayaran dan transfer dengan lebih mudah.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SISA KODE HTML (Fitur, Layanan, Prosedur, Lokasi, FAQ, CTA, Footer) TETAP SAMA SEPERTI SEBELUMNYA -->
-    <!-- (Salin tempel sisa kode dari file Anda yang lama ke sini) -->
+    <!-- Fitur Layanan Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge" data-id="Fitur Layanan" data-en="Service Features">Fitur Layanan</span>
+                <h2 class="section-title" data-id="Apa Saja yang Bisa<br>Dilakukan di Agen Kami?" data-en="What Can Be Done<br>at Our Agent?">Apa Saja yang Bisa<br>Dilakukan di Agen Kami?</h2>
+                <p class="section-subtitle" data-id="Berbagai kemudahan transaksi perbankan BPD DIY dalam satu genggaman" data-en="Various BPD DIY banking transaction conveniences in one hand">Berbagai kemudahan transaksi perbankan BPD DIY dalam satu genggaman</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-user-plus"></i></div>
+                    <h3 data-id="Aktivasi Rekening Baru" data-en="New Account Activation">Aktivasi Rekening Baru</h3>
+                    <p data-id="Pembukaan rekening nasabah BSA (Buku Simpanan Anda) langsung di agen." data-en="Opening a BSA customer account directly at the agent.">Pembukaan rekening nasabah BSA (Buku Simpanan Anda) langsung di agen.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-search-dollar"></i></div>
+                    <h3 data-id="Informasi Rekening" data-en="Account Information">Informasi Rekening</h3>
+                    <p data-id="Cek saldo agen & nasabah BSA, log transaksi, serta status transaksi." data-en="Check agent & BSA customer balances, transaction logs, and transaction status.">Cek saldo agen & nasabah BSA, log transaksi, serta status transaksi.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-piggy-bank"></i></div>
+                    <h3 data-id="Setor Tunai" data-en="Cash Deposit">Setor Tunai</h3>
+                    <p data-id="Setor tunai untuk nasabah BSA maupun nasabah reguler." data-en="Cash deposit for BSA customers and regular customers.">Setor tunai untuk nasabah BSA maupun nasabah reguler.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-money-bill-wave"></i></div>
+                    <h3 data-id="Tarik Tunai" data-en="Cash Withdrawal">Tarik Tunai</h3>
+                    <p data-id="Tarik tunai untuk nasabah BSA, termasuk tarik tunai tanpa kartu." data-en="Cash withdrawal for BSA customers, including cardless cash withdrawal.">Tarik tunai untuk nasabah BSA, termasuk tarik tunai tanpa kartu.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-exchange-alt"></i></div>
+                    <h3 data-id="Transfer Dana" data-en="Fund Transfer">Transfer Dana</h3>
+                    <p data-id="Transfer sesama rekening BPD DIY, ke rekening nasabah BSA, atau antar bank." data-en="Transfer between BPD DIY accounts, to BSA customer accounts, or between banks.">Transfer sesama rekening BPD DIY, ke rekening nasabah BSA, atau antar bank.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3 data-id="Pembelian Pulsa" data-en="Pulsa Purchase">Pembelian Pulsa</h3>
+                    <p data-id="Layanan pembelian pulsa untuk semua provider Telkomsel dan XL." data-en="Pulsa purchase service for all Telkomsel and XL providers.">Layanan pembelian pulsa untuk semua provider Telkomsel dan XL.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                    <h3 data-id="Pembayaran Tagihan" data-en="Bill Payment">Pembayaran Tagihan</h3>
+                    <p data-id="Bayar PBB, Retribusi, PDAM, Tiket Kereta Api, Pajak Daerah, Samsat, Asuransi (BPJS), Telepon/Internet (Telkom)." data-en="Pay property tax, retribution, water bill, train tickets, regional tax, Samsat, insurance (BPJS), telephone/internet (Telkom).">Bayar PBB, Retribusi, PDAM, Tiket Kereta Api, Pajak Daerah, Samsat, Asuransi (BPJS), Telepon/Internet (Telkom).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge" data-id="Layanan Kami" data-en="Our Services">Layanan Kami</span>
+                <h2 class="section-title" data-id="Layanan Agen Laku Pandai<br>BPD SMKN 1 Bantul" data-en="BPD Smart Agent Services<br>SMKN 1 Bantul">Layanan Agen Laku Pandai<br>BPD SMKN 1 Bantul</h2>
+                <p class="section-subtitle" data-id="Berbagai layanan perbankan untuk memenuhi kebutuhan Anda" data-en="Various banking services to meet your needs">Berbagai layanan perbankan untuk memenuhi kebutuhan Anda</p>
+            </div>
+            <div class="services-grid">
+                <!-- Layanan 1 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-piggy-bank"></i>
+                    </div>
+                    <h3 data-id="Informasi Simpanan Siswa" data-en="Student Savings Information">Informasi Simpanan Siswa</h3>
+                    <p data-id="Informasi dan layanan terkait tabungan dan simpanan siswa. Detail layanan dapat dikonfirmasi langsung kepada petugas agen." data-en="Information and services related to student savings. Service details can be confirmed directly with the agent.">Informasi dan layanan terkait tabungan dan simpanan siswa. Detail layanan dapat dikonfirmasi langsung kepada petugas agen.</p>
+                    <div style="display: flex; gap: 8px; justify-content: center; margin-top: 12px;">
+                        <a href="https://wa.me/628212024465?text=Halo%20Bu%20Tantri%2C%20saya%20ingin%20tahu%20tentang%20layanan%20simpanan%20siswa" class="btn-service" target="_blank" rel="noopener" style="margin-top: 0;"><i class="fab fa-whatsapp"></i> Bu Tantri</a>
+                        <a href="https://wa.me/6281802766019?text=Halo%20Bu%20Isti%2C%20saya%20ingin%20tahu%20tentang%20layanan%20simpanan%20siswa" class="btn-service" target="_blank" rel="noopener" style="margin-top: 0;"><i class="fab fa-whatsapp"></i> Bu Isti</a>
+                    </div>
+                </div>
+                <!-- Layanan 2 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-money-bill-transfer"></i>
+                    </div>
+                    <h3 data-id="Layanan Transaksi Perbankan" data-en="Banking Transaction Services">Layanan Transaksi Perbankan</h3>
+                    <p data-id="Berbagai transaksi perbankan dapat dilakukan di agen. Jenis transaksi yang tersedia dapat dikonfirmasi langsung kepada petugas agen." data-en="Various banking transactions can be done at the agent. Available transaction types can be confirmed directly with the agent.">Berbagai transaksi perbankan dapat dilakukan di agen. Jenis transaksi yang tersedia dapat dikonfirmasi langsung kepada petugas agen.</p>
+                    <div style="display: flex; gap: 8px; justify-content: center; margin-top: 12px;">
+                        <a href="https://wa.me/628212024465?text=Halo%20Bu%20Tantri%2C%20saya%20ingin%20tahu%20tentang%20transaksi%20perbankan" class="btn-service" target="_blank" rel="noopener" style="margin-top: 0;"><i class="fab fa-whatsapp"></i> Bu Tantri</a>
+                        <a href="https://wa.me/6281802766019?text=Halo%20Bu%20Isti%2C%20saya%20ingin%20tahu%20tentang%20transaksi%20perbankan" class="btn-service" target="_blank" rel="noopener" style="margin-top: 0;"><i class="fab fa-whatsapp"></i> Bu Isti</a>
+                    </div>
+                </div>
+                <!-- Layanan 3 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-receipt"></i>
+                    </div>
+                    <h3 data-id="Pembayaran" data-en="Payment">Pembayaran</h3>
+                    <p data-id="Layanan pembayaran yang tersedia di agen. Jenis pembayaran yang dapat dilakukan perlu dikonfirmasi langsung kepada petugas agen." data-en="Payment services available at the agent. The types of payments that can be made need to be confirmed directly with the agent.">Layanan pembayaran yang tersedia di agen. Jenis pembayaran yang dapat dilakukan perlu dikonfirmasi langsung kepada petugas agen.</p>
+                    <div style="display: flex; gap: 8px; justify-content: center; margin-top: 12px;">
+                        <a href="https://wa.me/628212024465?text=Halo%20Bu%20Tantri%2C%20saya%20ingin%20tahu%20tentang%20layanan%20pembayaran" class="btn-service" target="_blank" rel="noopener" style="margin-top: 0;"><i class="fab fa-whatsapp"></i> Bu Tantri</a>
+                        <a href="https://wa.me/6281802766019?text=Halo%20Bu%20Isti%2C%20saya%20ingin%20tahu%20tentang%20layanan%20pembayaran" class="btn-service" target="_blank" rel="noopener" style="margin-top: 0;"><i class="fab fa-whatsapp"></i> Bu Isti</a>
+                    </div>
+                </div>
+                <!-- Layanan 4 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 data-id="Konsultasi dan Informasi Perbankan" data-en="Consultation and Banking Information">Konsultasi dan Informasi Perbankan</h3>
+                    <p data-id="Dapatkan konsultasi dan informasi seputar layanan perbankan BPD DIY. Tim agen siap membantu menjawab pertanyaan Anda." data-en="Get consultation and information about BPD DIY banking services. The agent team is ready to help answer your questions.">Dapatkan konsultasi dan informasi seputar layanan perbankan BPD DIY. Tim agen siap membantu menjawab pertanyaan Anda.</p>
+                    <div style="display: flex; gap: 8px; justify-content: center; margin-top: 12px;">
+                        <a href="https://wa.me/628212024465?text=Halo%20Bu%20Tantri%2C%20saya%20ingin%20konsultasi" class="btn-service" target="_blank" rel="noopener" style="margin-top: 0;"><i class="fab fa-whatsapp"></i> Bu Tantri</a>
+                        <a href="https://wa.me/6281802766019?text=Halo%20Bu%20Isti%2C%20saya%20ingin%20konsultasi" class="btn-service" target="_blank" rel="noopener" style="margin-top: 0;"><i class="fab fa-whatsapp"></i> Bu Isti</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Procedure Section -->
+    <section class="procedure" id="procedure">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge" data-id="Prosedur Transaksi" data-en="Transaction Procedure">Prosedur Transaksi</span>
+                <h2 class="section-title" data-id="Langkah Mudah Bertransaksi" data-en="Easy Steps to Transact">Langkah Mudah Bertransaksi</h2>
+                <p class="section-subtitle" data-id="Alur mudah untuk memulai transaksi Anda di Agen Laku Pandai BPD SMKN 1 Bantul" data-en="An easy flow to start your transaction at the BPD Smart Agent SMKN 1 Bantul">Alur mudah untuk memulai transaksi Anda di Agen Laku Pandai BPD SMKN 1 Bantul</p>
+            </div>
+            <div class="procedure-timeline">
+                <div class="timeline-line"></div>
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-icon"><i class="fas fa-laptop"></i></div>
+                    <h3 data-id="Buka Website" data-en="Open Website">Buka Website</h3>
+                    <p data-id="Akses website Laku Pandai BPD SMKN 1 Bantul melalui browser di HP atau laptop Anda." data-en="Access the Laku Pandai BPD SMKN 1 Bantul website via a browser on your phone or laptop.">Akses website Laku Pandai BPD SMKN 1 Bantul melalui browser di HP atau laptop Anda.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-icon"><i class="fas fa-list-check"></i></div>
+                    <h3 data-id="Pilih Layanan" data-en="Choose Service">Pilih Layanan</h3>
+                    <p data-id="Tentukan jenis layanan atau fitur perbankan apa yang ingin Anda lakukan pada halaman ini." data-en="Determine the type of banking service or feature you want to do on this page.">Tentukan jenis layanan atau fitur perbankan apa yang ingin Anda lakukan pada halaman ini.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-icon"><i class="fab fa-whatsapp"></i></div>
+                    <h3 data-id="Klik CTA & Isi Form" data-en="Click CTA & Fill Form">Klik CTA & Isi Form</h3>
+                    <p data-id="Klik tombol 'Hubungi Agen' atau 'Konsultasi' untuk memulai chat WhatsApp." data-en="Click the 'Contact Agent' or 'Consultation' button to start a WhatsApp chat.">Klik tombol "Hubungi Agen" atau "Konsultasi" untuk memulai chat WhatsApp.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-icon"><i class="fas fa-calendar-check"></i></div>
+                    <h3 data-id="Janjian & Datang" data-en="Appointment & Come">Janjian & Datang</h3>
+                    <p data-id="Isi formulir via WA, sepakati jadwal janjian, lalu kunjungi lokasi agen di SMKN 1 Bantul." data-en="Fill out the form via WA, agree on an appointment schedule, then visit the agent location at SMKN 1 Bantul.">Isi formulir via WA, sepakati jadwal janjian, lalu kunjungi lokasi agen di SMKN 1 Bantul.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">5</div>
+                    <div class="step-icon"><i class="fas fa-hand-holding-dollar"></i></div>
+                    <h3 data-id="Lakukan Transaksi" data-en="Make a Transaction">Lakukan Transaksi</h3>
+                    <p data-id="Transaksi Anda diproses oleh agen. Jangan lupa simpan bukti transaksi yang diberikan." data-en="Your transaction is processed by the agent. Don't forget to save the transaction receipt provided.">Transaksi Anda diproses oleh agen. Jangan lupa simpan bukti transaksi yang diberikan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Hours Section -->
+    <section class="location" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge" data-id="Lokasi & Jam Operasional" data-en="Location & Operating Hours">Lokasi & Jam Operasional</span>
+                <h2 class="section-title" data-id="Temukan Agen Laku Pandai<br>BPD SMKN 1 Bantul" data-en="Find the BPD Smart Agent<br>SMKN 1 Bantul">Temukan Agen Laku Pandai<br>BPD SMKN 1 Bantul</h2>
+                <p class="section-subtitle" data-id="Kunjungi kami di lokasi agen untuk layanan perbankan langsung" data-en="Visit us at the agent location for direct banking services">Kunjungi kami di lokasi agen untuk layanan perbankan langsung</p>
+            </div>
+            <div class="location-content">
+                <div class="location-info">
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <h3 data-id="Lokasi Agen" data-en="Agent Location">Lokasi Agen</h3>
+                        <p>SMKN 1 Bantul<br><span class="placeholder-text">Jl. Parangtritis No. KM. 11, Dukuh, Sabdodadi, Kecamatan Bantul, Kabupaten Bantul, Daerah Istimewa Yogyakarta</span></p>
+                        <a href="https://maps.google.com/?q=SMKN+1+Bantul" class="btn btn-primary btn-sm" target="_blank" rel="noopener"><i class="fas fa-directions"></i> <span data-id="Petunjuk Arah" data-en="Directions">Petunjuk Arah</span></a>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fas fa-clock"></i></div>
+                        <h3 data-id="Jam Operasional" data-en="Operating Hours">Jam Operasional</h3>
+                        <div class="hours-list">
+                            <div class="hours-item"><span data-id="Senin - Kamis" data-en="Monday - Thursday">Senin - Kamis</span><span class="placeholder-text">(11.45 - 12.45)</span></div>
+                            <div class="hours-item"><span data-id="Jumat" data-en="Friday">Jumat</span><span class="placeholder-text">(11.30 - 12.30)</span></div>
+                            <div class="hours-item"><span data-id="Sabtu & Minggu" data-en="Saturday & Sunday">Sabtu & Minggu</span><span data-id="Tutup" data-en="Closed">Tutup</span></div>
+                        </div>
+                    </div>
+                    <!-- KONTAK DENGAN DUA NOMOR -->
+                    <div class="info-card info-card-contact">
+                        <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+                        <h3 data-id="Hubungi Kami" data-en="Contact Us">Hubungi Kami</h3>
+                        <p style="margin-bottom: 12px; font-size: 0.9rem; color: var(--gray-600);" data-id="Pilih nomor agen untuk konsultasi:" data-en="Choose an agent number for consultation:">Pilih nomor agen untuk konsultasi:</p>
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                            <a href="https://wa.me/628212024465?text=Halo%20Bu%20Tantri%20Laku%20Pandai" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener">
+                                <i class="fab fa-whatsapp"></i> Bu Tantri
+                            </a>
+                            <a href="https://wa.me/6281802766019?text=Halo%20Bu%20Isti%20Laku%20Pandai" class="btn btn-whatsapp-outline btn-sm" target="_blank" rel="noopener">
+                                <i class="fab fa-whatsapp"></i> Bu Isti
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Lokasi Map -->
+                <div class="location-map">
+                    <div class="map-container">
+                        <iframe src="https://maps.google.com/maps?q=SMK%20Negeri%201%20Bantul&t=&z=16&ie=UTF8&iwloc=&output=embed" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge" data-id="FAQ" data-en="FAQ">FAQ</span>
+                <h2 class="section-title" data-id="Pertanyaan yang Sering<br>Diajukan" data-en="Frequently Asked<br>Questions">Pertanyaan yang Sering<br>Diajukan</h2>
+                <p class="section-subtitle" data-id="Temukan jawaban untuk pertanyaan umum tentang layanan kami" data-en="Find answers to common questions about our services">Temukan jawaban untuk pertanyaan umum tentang layanan kami</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question"><span data-id="Apa itu Agen Laku Pandai?" data-en="What is a Smart Agent?">Apa itu Agen Laku Pandai?</span><i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p data-id="Agen Laku Pandai BPD adalah layanan perbankan alternatif dari Bank Pegadaian Daerah Istimewa Yogyakarta (BPD DIY) yang memudahkan masyarakat mengakses layanan perbankan tanpa perlu datang ke kantor cabang. Di SMKN 1 Bantul, agen ini berfungsi sebagai wadah layanan keuangan untuk siswa, orang tua, dan staf sekolah." data-en="BPD Smart Agent is an alternative banking service from Bank Pegadaian Daerah Istimewa Yogyakarta (BPD DIY) that makes it easier for people to access banking services without having to come to a branch office. At SMKN 1 Bantul, this agent functions as a financial service platform for students, parents, and school staff.">Agen Laku Pandai BPD adalah layanan perbankan alternatif dari Bank Pegadaian Daerah Istimewa Yogyakarta (BPD DIY) yang memudahkan masyarakat mengakses layanan perbankan tanpa perlu datang ke kantor cabang. Di SMKN 1 Bantul, agen ini berfungsi sebagai wadah layanan keuangan untuk siswa, orang tua, dan staf sekolah.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question"><span data-id="Apa manfaat layanan Agen Laku Pandai?" data-en="What are the benefits of Smart Agent services?">Apa manfaat layanan Agen Laku Pandai?</span><i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p data-id="Manfaat layanan Agen Laku Pandai antara lain: memudahkan akses layanan perbankan di lingkungan sekolah, hemat waktu dan biaya perjalanan ke kantor cabang, transaksi yang aman dan terpercaya, serta pelayanan yang ramah dan mudah dipahami." data-en="The benefits of Smart Agent services include: easier access to banking services in the school environment, saving time and travel costs to branch offices, safe and reliable transactions, and friendly and easy-to-understand service.">Manfaat layanan Agen Laku Pandai antara lain: memudahkan akses layanan perbankan di lingkungan sekolah, hemat waktu dan biaya perjalanan ke kantor cabang, transaksi yang aman dan terpercaya, serta pelayanan yang ramah dan mudah dipahami.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question"><span data-id="Siapa saja yang dapat menggunakan layanan?" data-en="Who can use the service?">Siapa saja yang dapat menggunakan layanan?</span><i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p data-id="Layanan Agen Laku Pandai BPD SMKN 1 Bantul dapat digunakan oleh siswa, orang tua/wali murid, dan staf sekolah SMKN 1 Bantul." data-en="BPD Smart Agent SMKN 1 Bantul services can be used by students, parents/guardians, and school staff of SMKN 1 Bantul.">Layanan Agen Laku Pandai BPD SMKN 1 Bantul dapat digunakan oleh siswa, orang tua/wali murid, dan staf sekolah SMKN 1 Bantul.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question"><span data-id="Bagaimana cara melakukan transaksi?" data-en="How to make a transaction?">Bagaimana cara melakukan transaksi?</span><i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p data-id="Cara melakukan transaksi di Agen Laku Pandai BPD SMKN 1 Bantul: 1. Datang ke lokasi agen sesuai jam operasional, 2. Sampaikan kebutuhan transaksi, 3. Ikuti arahan petugas, 4. Lakukan konfirmasi, 5. Simpan bukti transaksi." data-en="How to make a transaction at BPD Smart Agent SMKN 1 Bantul: 1. Come to the agent location according to operating hours, 2. Convey your transaction needs, 3. Follow staff directions, 4. Confirm the transaction, 5. Keep the transaction receipt.">Cara melakukan transaksi di Agen Laku Pandai BPD SMKN 1 Bantul: 1. Datang ke lokasi agen sesuai jam operasional, 2. Sampaikan kebutuhan transaksi, 3. Ikuti arahan petugas, 4. Lakukan konfirmasi, 5. Simpan bukti transaksi.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question"><span data-id="Di mana lokasi agen?" data-en="Where is the agent location?">Di mana lokasi agen?</span><i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p data-id="Agen Laku Pandai BPD SMKN 1 Bantul terletak di lingkungan SMKN 1 Bantul. Untuk informasi alamat lengkap dan petunjuk arah, silakan hubungi kami melalui WhatsApp atau lihat pada bagian Lokasi di halaman ini." data-en="BPD Smart Agent SMKN 1 Bantul is located in the SMKN 1 Bantul environment. For complete address information and directions, please contact us via WhatsApp or see the Location section on this page.">Agen Laku Pandai BPD SMKN 1 Bantul terletak di lingkungan SMKN 1 Bantul. Untuk informasi alamat lengkap dan petunjuk arah, silakan hubungi kami melalui WhatsApp atau lihat pada bagian Lokasi di halaman ini.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question"><span data-id="Bagaimana cara menghubungi agen?" data-en="How to contact the agent?">Bagaimana cara menghubungi agen?</span><i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p data-id="Anda dapat menghubungi Agen Laku Pandai BPD SMKN 1 Bantul melalui WhatsApp dengan mengklik tombol 'Hubungi Agen' di website ini." data-en="You can contact the BPD Smart Agent SMKN 1 Bantul via WhatsApp by clicking the 'Contact Agent' button on this website.">Anda dapat menghubungi Agen Laku Pandai BPD SMKN 1 Bantul melalui WhatsApp dengan mengklik tombol "Hubungi Agen" di website ini.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="cta-bg-elements">
+            <div class="cta-circle cta-circle-1"></div>
+            <div class="cta-circle cta-circle-2"></div>
+        </div>
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title" data-id="Butuh Informasi Layanan Perbankan?" data-en="Need Banking Service Information?">Butuh Informasi Layanan Perbankan?</h2>
+                <p class="cta-subtitle" data-id="Tim Agen Laku Pandai BPD SMKN 1 Bantul siap membantu Anda. Hubungi kami sekarang untuk konsultasi gratis." data-en="The BPD Smart Agent SMKN 1 Bantul team is ready to help you. Contact us now for a free consultation.">Tim Agen Laku Pandai BPD SMKN 1 Bantul siap membantu Anda. Hubungi kami sekarang untuk konsultasi gratis.</p>
+                <!-- DUA TOMBOL DI CTA BAWAH -->
+                <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://wa.me/628212024465?text=Halo%20Bu%20Tantri%2C%20saya%20ingin%20konsultasi" class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp"></i> <span data-id="Hubungi Bu Tantri" data-en="Contact Bu Tantri">Hubungi Bu Tantri</span>
+                    </a>
+                    <a href="https://wa.me/6281802766019?text=Halo%20Bu%20Isti%2C%20saya%20ingin%20konsultasi" class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener" style="background: transparent; border: 2px solid var(--whatsapp); color: var(--whatsapp);">
+                        <i class="fab fa-whatsapp"></i> <span data-id="Hubungi Bu Isti" data-en="Contact Bu Isti">Hubungi Bu Isti</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <!-- LOGO BPD DI FOOTER -->
+                        <div class="logo-icon">
+                            <img src="logo-bpd.png" alt="Logo BPD DIY">
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-main">Laku Pandai</span>
+                            <span class="logo-sub">BPD SMKN 1 Bantul</span>
+                        </div>
+                    </div>
+                    <p class="footer-desc" data-id="Agen Laku Pandai BPD DIY di lingkungan SMKN 1 Bantul. Layanan transaksi perbankan yang aman, cepat, dan terpercaya untuk siswa, orang tua, dan staf sekolah." data-en="BPD DIY Smart Agent in the SMKN 1 Bantul environment. Safe, fast, and reliable banking transaction services for students, parents, and school staff.">Agen Laku Pandai BPD DIY di lingkungan SMKN 1 Bantul. Layanan transaksi perbankan yang aman, cepat, dan terpercaya untuk siswa, orang tua, dan staf sekolah.</p>
+                    <div class="footer-social" style="display: flex; gap: 10px;">
+                        <a href="https://wa.me/628212024465" target="_blank" rel="noopener" aria-label="Bu Tantri"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://wa.me/6281802766019" target="_blank" rel="noopener" aria-label="Bu Isti"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4 data-id="Navigasi" data-en="Navigation">Navigasi</h4>
+                    <ul>
+                        <li><a href="#home" data-id="Beranda" data-en="Home">Beranda</a></li>
+                        <li><a href="#about" data-id="Tentang Kami" data-en="About Us">Tentang Kami</a></li>
+                        <li><a href="#features" data-id="Fitur" data-en="Features">Fitur</a></li>
+                        <li><a href="#services" data-id="Layanan" data-en="Services">Layanan</a></li>
+                        <li><a href="#procedure" data-id="Prosedur Transaksi" data-en="Transaction Procedure">Prosedur Transaksi</a></li>
+                        <li><a href="#faq" data-id="FAQ" data-en="FAQ">FAQ</a></li>
+                        <li><a href="#contact" data-id="Kontak" data-en="Contact">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 data-id="Kontak" data-en="Contact">Kontak</h4>
+                    <div class="footer-contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <span data-id="Bu Tantri: 08212024465<br>Bu Isti: 081802766019" data-en="Bu Tantri: 08212024465<br>Bu Isti: 081802766019">Bu Tantri: 08212024465<br>Bu Isti: 081802766019</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>SMKN 1 Bantul, Bantul, DI Yogyakarta</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span data-id="Senin - Kamis: 11.45 - 12.45<br>Jumat: 11.30 - 12.30" data-en="Monday - Thursday: 11.45 - 12.45<br>Friday: 11.30 - 12.30">Senin - Kamis: 11.45 - 12.45<br>Jumat: 11.30 - 12.30</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-line"></div>
+                <p>© 2025 Agen Laku Pandai BPD SMKN 1 Bantul. <span data-id="Seluruh hak cipta dilindungi." data-en="All rights reserved.">Seluruh hak cipta dilindungi.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <!-- Script JavaScript untuk Ganti Bahasa -->
     <script>
