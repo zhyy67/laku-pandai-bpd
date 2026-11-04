@@ -1,6 +1,6 @@
 /* ============================================
    LANDING PAGE LAKU PANDAI BPD SMKN 1 BANTUL
-   JavaScript - Interaksi & Animasi
+   JavaScript - Interaksi, Animasi & Formulir
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Also handle the hero buttons
+    // Also handle the hero buttons & links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', (e) => {
             const href = anchor.getAttribute('href');
@@ -237,11 +237,17 @@ document.addEventListener('DOMContentLoaded', () => {
 // ==========================================
 
 /**
+ * Variabel global untuk menyimpan nama petugas yang dipilih
+ * agar bisa dibaca saat fungsi kirimKeWhatsApp() dipanggil.
+ */
+window.petugasTerpilih = "";
+
+/**
  * Fungsi untuk membuka formulir, menyembunyikan halaman utama,
  * dan otomatis mencentang jenis transaksi.
  */
 function bukaFormulir(jenisLayanan, namaPetugas) {
-    // 1. Simpan nama petugas ke variabel global agar bisa dibaca saat kirim WA
+    // 1. Simpan nama petugas ke variabel global
     window.petugasTerpilih = namaPetugas;
 
     // 2. Sembunyikan semua section utama
@@ -333,15 +339,15 @@ function tutupFormulir() {
 // ==========================================
 
 /**
- * Fungsi untuk mengambil semua data dari formulir,
+ * Fungsi untuk mengambil semua data dari formulir (termasuk E-Wallet & NIS),
  * memformatnya menjadi pesan yang rapi,
  * dan membukanya di aplikasi WhatsApp.
  */
 function kirimKeWhatsApp() {
     // 1. Ambil nilai dari semua input berdasarkan ID
     const nama = document.getElementById('inputNama').value.trim();
-    const rekening = document.getElementById('inputRekening').value.trim();
-    const nik = document.getElementById('inputNIK').value.trim();
+    const noWallet = document.getElementById('inputRekening').value.trim(); // No HP / Dana / OVO
+    const nikNis = document.getElementById('inputNIK').value.trim(); // NIK / NIS
     const hp = document.getElementById('inputHP').value.trim();
     const tanggal = document.getElementById('tanggal').value;
     
@@ -353,7 +359,7 @@ function kirimKeWhatsApp() {
     let jenisStr = jenisTransaksi.length > 0 ? jenisTransaksi.join(', ') : 'Tidak ada yang dipilih';
 
     const nominal = document.getElementById('inputNominal').value.trim();
-    const bank = document.getElementById('inputBank').value.trim();
+    const bankTujuan = document.getElementById('inputBank').value.trim(); // Bank / E-Wallet Tujuan
     const rekTujuan = document.getElementById('inputRekTujuan').value.trim();
     const penerima = document.getElementById('inputPenerima').value.trim();
     const keterangan = document.getElementById('inputKeterangan').value.trim();
@@ -373,29 +379,28 @@ function kirimKeWhatsApp() {
     }
 
     // 3. Tentukan Nomor WhatsApp Tujuan
-    // Ganti nomor ini dengan nomor asli Bu Tantri dan Bu Isti (Gunakan awalan 62)
+    // Pastikan nomor ini sudah sesuai (awalan 62)
     const nomorBuTantri = "628212024465"; 
     const nomorBuIsti = "6281802766019";
     
-    // Cek petugas yang dipilih saat tombol buka formulir diklik
     let nomorWA = nomorBuTantri; // Default
     if (window.petugasTerpilih === "Bu Isti") {
         nomorWA = nomorBuIsti;
     }
 
-    // 4. Susun pesan WhatsApp (Gunakan %0A untuk Enter/Baris Baru)
+    // 4. Susun pesan WhatsApp (Menggunakan %0A untuk Enter/Baris Baru)
     const pesan = `Halo *${window.petugasTerpilih}*, saya ingin melakukan transaksi Laku Pandai BPD.%0A%0A` +
                   `*--- DATA NASABAH ---*%0A` +
                   `Nama: ${nama}%0A` +
-                  `No. Rekening: ${rekening || '-'}%0A` +
-                  `NIK: ${nik || '-'}%0A` +
-                  `No. HP: ${hp || '-'}%0A` +
+                  `No. HP / E-Wallet: ${noWallet || '-'}%0A` +
+                  `NIK / NIS: ${nikNis || '-'}%0A` +
+                  `No. HP Aktif: ${hp || '-'}%0A` +
                   `Tanggal: ${tanggal}%0A%0A` +
                   `*--- DETAIL TRANSAKSI ---*%0A` +
                   `Jenis Transaksi: *${jenisStr}*%0A` +
                   `Nominal: *Rp ${nominal}*%0A` +
-                  `Bank Tujuan: ${bank || '-'}%0A` +
-                  `No. Rek Tujuan: ${rekTujuan || '-'}%0A` +
+                  `Bank/Wallet Tujuan: ${bankTujuan || '-'}%0A` +
+                  `No. Rek/HP Tujuan: ${rekTujuan || '-'}%0A` +
                   `Nama Penerima: ${penerima || '-'}%0A` +
                   `Keterangan: ${keterangan || '-'}%0A%0A` +
                   `*--- KONFIRMASI ---*%0A` +
@@ -406,9 +411,6 @@ function kirimKeWhatsApp() {
     // 5. Buka WhatsApp di tab baru
     const urlWA = `https://wa.me/${nomorWA}?text=${pesan}`;
     window.open(urlWA, '_blank');
-    
-    // 6. Tutup formulir setelah dikirim (Opsional)
-    // tutupFormulir(); 
     
     // Beri notifikasi ke user
     alert("Formulir berhasil disiapkan! Silakan klik 'Kirim' di aplikasi WhatsApp Anda.");

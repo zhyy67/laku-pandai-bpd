@@ -336,17 +336,22 @@
                 <label>Nama Nasabah</label><div class="separator">:</div>
                 <input type="text" id="inputNama" placeholder="Masukkan nama lengkap">
             </div>
+            
+            <!-- PERUBAHAN 1: Nomor Rekening menjadi Nomor HP / E-Wallet -->
             <div class="form-group">
-                <label>Nomor Rekening</label><div class="separator">:</div>
-                <input type="text" id="inputRekening" placeholder="Masukkan nomor rekening">
+                <label>No. HP / E-Wallet (Dana/OVO)</label><div class="separator">:</div>
+                <input type="text" id="inputRekening" placeholder="Contoh: 089529404114 (Dana)">
             </div>
+            
+            <!-- PERUBAHAN 2: NIK / NIS -->
             <div class="form-group">
                 <label>NIK / NIS</label><div class="separator">:</div>
-                <input type="text" id="inputNIK" placeholder="Masukkan NIK (16 digit)">
+                <input type="text" id="inputNIK" placeholder="Masukkan NIK atau NIS siswa">
             </div>
+            
             <div class="form-group">
-                <label>Nomor HP</label><div class="separator">:</div>
-                <input type="text" id="inputHP" placeholder="Masukkan nomor HP aktif">
+                <label>Nomor HP Aktif</label><div class="separator">:</div>
+                <input type="text" id="inputHP" placeholder="Masukkan nomor HP yang bisa dihubungi">
             </div>
             <div class="form-group">
                 <label>Tanggal Transaksi</label><div class="separator">:</div>
@@ -375,13 +380,16 @@
                     <input type="text" id="inputNominal" style="border-bottom:none;" placeholder="0">
                 </div>
             </div>
+            
+            <!-- PERUBAHAN 3: Bank Tujuan / E-Wallet Tujuan -->
             <div class="form-group">
-                <label>Nama Bank Tujuan</label><div class="separator">:</div>
-                <input type="text" id="inputBank" placeholder="Contoh: BPD DIY, BCA, Mandiri, dll">
+                <label>Bank / E-Wallet Tujuan</label><div class="separator">:</div>
+                <input type="text" id="inputBank" placeholder="Contoh: BPD DIY, BCA, Dana, OVO, dll">
             </div>
+            
             <div class="form-group">
-                <label>Nomor Rekening Tujuan</label><div class="separator">:</div>
-                <input type="text" id="inputRekTujuan" placeholder="Masukkan nomor rekening tujuan">
+                <label>No. Rekening / No. HP Tujuan</label><div class="separator">:</div>
+                <input type="text" id="inputRekTujuan" placeholder="Masukkan nomor tujuan">
             </div>
             <div class="form-group">
                 <label>Nama Penerima</label><div class="separator">:</div>
@@ -410,7 +418,6 @@
             <!-- Tombol Aksi -->
             <div class="action-buttons">
                 <button class="btn btn-print" onclick="window.print()">Cetak Formulir</button>
-                <!-- Tombol ini memanggil fungsi kirimKeWhatsApp() -->
                 <button class="btn btn-wa-submit" onclick="kirimKeWhatsApp()">
                     <i class="fab fa-whatsapp"></i> Kirim ke WhatsApp
                 </button>
@@ -657,7 +664,7 @@
         }
     </script>
 
-    <!-- Hubungkan ke file script.js (yang berisi fungsi bukaFormulir, tutupFormulir, dan kirimKeWhatsApp) -->
+    <!-- Hubungkan ke file script.js -->
     <script src="script.js"></script>
 </body>
 </html>
